@@ -1,5 +1,6 @@
 import { get } from 'lodash'
 import React, { useCallback, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Col, Row } from 'react-bootstrap'
 import {
   BsArrowCounterclockwise,
@@ -60,13 +61,14 @@ function DataLoader({
   replaceRequiresConfirmation,
   hydrateFromProject,
 }) {
+  const { t } = useTranslation()
   const [loadingError, setLoadingError] = useState()
   const [initialOptionState, setInitialOptionState] = useState(null)
 
   const options = [
     {
       id: 'paste',
-      name: 'Paste your data',
+      name: t('dataLoader.paste'),
       loader: (
         <Paste
           userInput={userInput}
@@ -74,14 +76,13 @@ function DataLoader({
           setLoadingError={setLoadingError}
         />
       ),
-      message:
-        'Copy and paste your data from other applications or websites. You can use tabular (TSV, CSV, DSV) or JSON data.',
+      message: t('dataLoader.pasteMessage'),
       icon: BsClipboard,
       allowedForReplace: true,
     },
     {
       id: 'upload',
-      name: 'Upload your data',
+      name: t('dataLoader.upload'),
       loader: (
         <UploadFile
           userInput={userInput}
@@ -91,13 +92,13 @@ function DataLoader({
           setLoadingError={setLoadingError}
         />
       ),
-      message: 'You can load tabular (TSV, CSV, DSV) or JSON data.',
+      message: t('dataLoader.uploadMessage'),
       icon: BsUpload,
       allowedForReplace: true,
     },
     {
       id: 'sample',
-      name: 'Try our data samples',
+      name: t('dataLoader.sample'),
       message: '',
       loader: (
         <DataSamples
@@ -110,8 +111,8 @@ function DataLoader({
     },
     {
       id: 'sparql',
-      name: 'SPARQL query',
-      message: 'Load data with a SparQL query',
+      name: t('dataLoader.sparql'),
+      message: t('dataLoader.sparqlMessage'),
       loader: (
         <SparqlFetch
           userInput={userInput}
@@ -128,9 +129,8 @@ function DataLoader({
     },
     {
       id: 'url',
-      name: 'From URL',
-      message:
-        'Enter a web address (URL) pointing to the data (e.g. a public Dropbox file, a public API, ...). Please, be sure the server is CORS-enabled.',
+      name: t('dataLoader.url'),
+      message: t('dataLoader.urlMessage'),
       loader: (
         <UrlFetch
           userInput={userInput}
@@ -147,8 +147,8 @@ function DataLoader({
     },
     {
       id: 'project',
-      name: 'Open your project',
-      message: 'Load a .rawgraphs project.',
+      name: t('dataLoader.project'),
+      message: t('dataLoader.projectMessage'),
       loader: (
         <LoadProject
           onProjectSelected={hydrateFromProject}
@@ -304,7 +304,7 @@ function DataLoader({
                   onClick={reloadRAW}
                 >
                   <BsArrowRepeat className="mr-2" />
-                  <h4 className="m-0 d-inline-block">{'Reset'}</h4>
+                  <h4 className="m-0 d-inline-block">{t('dataLoader.reset')}</h4>
                 </div>
 
                 <div
@@ -313,7 +313,7 @@ function DataLoader({
                     cancelDataReplace()
                   }}
                 >
-                  <h4 className="m-0 d-inline-block">{'Cancel'}</h4>
+                  <h4 className="m-0 d-inline-block">{t('dataLoader.cancel')}</h4>
                 </div>
               </>
             )}
@@ -349,7 +349,7 @@ function DataLoader({
               onClick={reloadRAW}
             >
               <BsArrowRepeat className="mr-2" />
-              <h4 className="m-0 d-inline-block">{'Reset'}</h4>
+              <h4 className="m-0 d-inline-block">{t('dataLoader.reset')}</h4>
             </div>
 
             <div
@@ -364,7 +364,7 @@ function DataLoader({
               }}
             >
               <BsArrowCounterclockwise className="mr-2" />
-              <h4 className="m-0 d-inline-block">{'Change data'}</h4>
+              <h4 className="m-0 d-inline-block">{t('dataLoader.changeData')}</h4>
             </div>
           </Col>
         )}

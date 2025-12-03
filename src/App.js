@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useMemo, useEffect, useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 import {
   getOptionsConfig,
   getDefaultOptionsValues,
@@ -26,9 +27,8 @@ import CookieConsent from 'react-cookie-consent'
 import CustomChartLoader from './components/CustomChartLoader'
 import CustomChartWarnModal from './components/CustomChartWarnModal'
 
-// #TODO: i18n
-
 function App() {
+  const { t } = useTranslation()
   const [
     customCharts,
     {
@@ -266,11 +266,11 @@ function App() {
         abortCustomChartLoad={abortCustomChartLoad}
       />
       <div className="app-sections">
-        <Section title={`1. Load your data`} loading={loading}>
+        <Section title={t('app.section1')} loading={loading}>
           <DataLoader {...dataLoader} hydrateFromProject={importProject} />
         </Section>
         {data && (
-          <Section title="2. Choose a chart">
+          <Section title={t('app.section2')}>
             <CustomChartLoader
               isOpen={isModalCustomChartOpen}
               onClose={toggleModalCustomChart}
@@ -288,7 +288,7 @@ function App() {
           </Section>
         )}
         {data && currentChart && (
-          <Section title={`3. Mapping`} loading={mappingLoading}>
+          <Section title={t('app.section3')} loading={mappingLoading}>
             <DataMapping
               ref={dataMappingRef}
               dimensions={currentChart.dimensions}
@@ -299,7 +299,7 @@ function App() {
           </Section>
         )}
         {data && currentChart && (
-          <Section title="4. Customize">
+          <Section title={t('app.section4')}>
             <ChartPreviewWithOptions
               chart={currentChart}
               dataset={data.dataset}
@@ -313,14 +313,14 @@ function App() {
           </Section>
         )}
         {data && currentChart && rawViz && (
-          <Section title="5. Export">
+          <Section title={t('app.section5')}>
             <Exporter rawViz={rawViz} exportProject={exportProject} />
           </Section>
         )}
         <Footer />
         <CookieConsent
           location="bottom"
-          buttonText="Got it!"
+          buttonText={t('cookie.gotIt')}
           style={{ background: '#f5f5f5', color: '#646467' }}
           buttonStyle={{
             background: '#646467',
@@ -332,15 +332,14 @@ function App() {
           buttonClasses="btn btn-default btn-grey"
           acceptOnScroll={true}
         >
-          This website uses Google Analytics to anonymously collect browsing
-          data.{' '}
+          {t('cookie.message')}{' '}
           <a
             href="https://rawgraphs.io/privacy/"
             target="_blank"
             rel="noopener noreferrer"
             className="ml-2 text-body border-bottom border-dark"
           >
-            Learn More
+            {t('cookie.learnMore')}
           </a>
         </CookieConsent>
       </div>

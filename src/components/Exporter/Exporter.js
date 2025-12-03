@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { InputGroup, DropdownButton, Dropdown } from 'react-bootstrap'
 import { onChartExported } from '../../gaEvents'
 
@@ -12,6 +13,8 @@ function downloadBlob(url, filename) {
 }
 
 export default function Exporter({ rawViz, exportProject }) {
+  const { t } = useTranslation()
+
   const downloadSvg = useCallback(
     (filename) => {
       var svgString = new XMLSerializer().serializeToString(
@@ -128,7 +131,7 @@ export default function Exporter({ rawViz, exportProject }) {
           className="btn btn-primary btn-block raw-btn"
           onClick={downloadViz}
         >
-          Download
+          {t('exporter.download')}
         </button>
       </div>
     </div>

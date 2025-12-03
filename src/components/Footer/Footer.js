@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import styles from './Footer.module.scss'
 import { Row, Col, Container } from 'react-bootstrap'
 import { BsFillEnvelopeFill, BsBarChartFill } from 'react-icons/bs'
@@ -8,13 +9,15 @@ import { FaTwitter, FaGithub } from 'react-icons/fa'
 // const commitHash = process.env.REACT_APP_VERSION || 'dev'
 
 export default function Footer(props) {
+  const { t } = useTranslation()
+
   return (
     <Container fluid style={{ backgroundColor: 'var(--dark)' }}>
       <Container className={styles.footer}>
         <Row>
           <Col xs={6} sm={{ span: 5, order: 1 }} lg={{ span: 3, order: 1 }}>
             <p className="Xsmall">
-              RAWGraphs is an open source project designed and developed by{' '}
+              {t('footer.description')}{' '}
               <a
                 href="http://densitydesign.org/"
                 target="_blank"
@@ -30,7 +33,7 @@ export default function Footer(props) {
               >
                 Calibro
               </a>{' '}
-              and{' '}
+              {t('footer.and')}{' '}
               <a
                 href="https://inmagik.com/"
                 target="_blank"

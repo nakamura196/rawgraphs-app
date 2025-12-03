@@ -1,0 +1,117 @@
+{
+  "app": {
+    "section1": "1. Load your data",
+    "section2": "2. Choose a chart",
+    "section3": "3. Mapping",
+    "section4": "4. Customize",
+    "section5": "5. Export"
+  },
+  "header": {
+    "about": "About",
+    "learning": "Learning",
+    "github": "GitHub",
+    "reportIssue": "Report issue",
+    "supportUs": "Support us"
+  },
+  "cookie": {
+    "message": "This website uses Google Analytics to anonymously collect browsing data.",
+    "learnMore": "Learn More",
+    "gotIt": "Got it!"
+  },
+  "dataLoader": {
+    "paste": "Paste your data",
+    "pasteMessage": "Copy and paste your data from other applications or websites. You can use tabular (TSV, CSV, DSV) or JSON data.",
+    "upload": "Upload your data",
+    "uploadMessage": "You can load tabular (TSV, CSV, DSV) or JSON data.",
+    "sample": "Try our data samples",
+    "sparql": "SPARQL query",
+    "sparqlMessage": "Load data with a SparQL query",
+    "url": "From URL",
+    "urlMessage": "Enter a web address (URL) pointing to the data (e.g. a public Dropbox file, a public API, ...). Please, be sure the server is CORS-enabled.",
+    "project": "Open your project",
+    "projectMessage": "Load a .rawgraphs project.",
+    "reset": "Reset",
+    "cancel": "Cancel",
+    "changeData": "Change data",
+    "successMessage": "{{count}} rows ({{cells}} cells) have been successfully parsed, now you can choose a chart!",
+    "rows": "rows",
+    "cells": "cells",
+    "parsed": "have been successfully parsed, now you can choose a chart!"
+  },
+  "parsingOptions": {
+    "title": "DATA PARSING OPTIONS",
+    "separator": "Column separator",
+    "thousandsSeparator": "Thousands separator",
+    "decimalsSeparator": "Decimals separator",
+    "dateLocale": "Date Locale",
+    "refreshUrl": "Refresh data from url",
+    "refreshSparql": "Refresh data from query",
+    "refreshData": "Refresh data",
+    "transformation": "DATA TRANSFORMATION",
+    "stackOn": "Stack on"
+  },
+  "chartSelector": {
+    "show": "Show",
+    "allCharts": "All charts",
+    "loadCustomChart": "Load custom chart",
+    "code": "Code",
+    "tutorial": "Tutorial"
+  },
+  "exporter": {
+    "download": "Download"
+  },
+  "footer": {
+    "description": "RAWGraphs is an open source project designed and developed by",
+    "and": "and"
+  },
+  "screenSizeAlert": {
+    "title": "Welcome to the new RAWGraphs!",
+    "message": "RAWGraphs 2.0 is designed for bigger screens!",
+    "messageSlightly": "RAWGraphs 2.0 is designed for slightly bigger screens!",
+    "resize": "Resize your browser window or",
+    "sendReminder": "send yourself a reminder",
+    "comeback": "to come back at a better time.",
+    "touchNotSupported": "Touch devices are not fully supported yet.",
+    "gotIt": "Got it!"
+  },
+  "dataMapping": {
+    "dimensions": "Dimensions",
+    "chartVariables": "Chart Variables",
+    "required": "required",
+    "multiple": "multiple",
+    "dropHere": "Drop dimension here",
+    "dropHereMultiple": "Drop dimensions here",
+    "dropAnotherHere": "Drop another dimension here",
+    "rollUp": "Roll-up"
+  },
+  "chartOptions": {
+    "artboard": "Artboard",
+    "width": "Width",
+    "height": "Height",
+    "colors": "Colors",
+    "finalOutput": "The final output will be {{width}}px * {{height}}px including the legend."
+  },
+  "customChartLoader": {
+    "title": "Load custom chart",
+    "loadFromFile": "Load from file",
+    "importFromUrl": "Import from URL",
+    "importFromNpm": "Import from NPM",
+    "dragFile": "Drag a file here or",
+    "browse": "Browse",
+    "fromComputer": "a file from your computer",
+    "allAccepted": "All files will be accepted",
+    "someRejected": "Some files will be rejected",
+    "loadYourChart": "Load your chart",
+    "placeholderNpm": "Load UMD or AMD JS File from NPM",
+    "placeholderUrl": "Load UMD or AMD JS File from URL",
+    "importError": "Error during custom chart import",
+    "documentation": "Do you want to know how to create a custom chart?",
+    "checkDocs": "Check our documentation"
+  },
+  "customChartWarn": {
+    "title": "Warning!",
+    "message": "You are about to execute third party JavaScript continue at your own risk.",
+    "dontExecute": "Don't execute",
+    "continue": "Continue"
+  }
+}

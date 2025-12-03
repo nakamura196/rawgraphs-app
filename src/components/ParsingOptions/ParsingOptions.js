@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { Row, Col, Button } from 'react-bootstrap'
 import SeparatorSelector from './SeparatorSelector'
 import ThousandsSeparatorSelector from './ThousandsSeparatorSelector'
@@ -17,12 +18,14 @@ const dataRefreshWorkers = {
   "sparql": fetchDataFromSparql
 }
 
-const dataRefreshCaptions = {
-  "url": "Refresh data from url",
-  "sparql": "Refresh data from query"
-}
-
 export default function ParsingOptions(props) {
+  const { t } = useTranslation()
+
+  const dataRefreshCaptions = {
+    "url": t('parsingOptions.refreshUrl'),
+    "sparql": t('parsingOptions.refreshSparql')
+  }
+
   const refreshData = async () => {
     const dataRefreshImpl = dataRefreshWorkers[get(props.dataSource, "type", "")]
     const data = await dataRefreshImpl(props.dataSource)
@@ -32,24 +35,24 @@ export default function ParsingOptions(props) {
   return (
     <Row>
       <Col className={styles.parsingOptions}>
-        <b>DATA PARSING OPTIONS</b>
+        <b>{t('parsingOptions.title')}</b>
 
         {props.userDataType === 'csv' && (
           <SeparatorSelector
-            title="Column separator"
+            title={t('parsingOptions.separator')}
             value={props.separator}
             onChange={(nextSeparator) => props.setSeparator(nextSeparator)}
           />
         )}
         <ThousandsSeparatorSelector
-          title="Thousands separator"
+          title={t('parsingOptions.thousandsSeparator')}
           value={props.thousandsSeparator}
           onChange={(nextSeparator) =>
             props.setThousandsSeparator(nextSeparator)
           }
         />
         <DecimalsSeparatorSelector
-          title="Decimals separator"
+          title={t('parsingOptions.decimalsSeparator')}
           value={props.decimalsSeparator}
           onChange={(nextSeparator) =>
             props.setDecimalsSeparator(nextSeparator)
@@ -57,7 +60,7 @@ export default function ParsingOptions(props) {
         />
 
         <DateLocaleSelector
-          title="Date Locale"
+          title={t('parsingOptions.dateLocale')}
           value={props.locale}
           onChange={(nextLocale) => props.setLocale(nextLocale)}
         />
@@ -69,16 +72,16 @@ export default function ParsingOptions(props) {
             onClick={() => refreshData()}
           >
             <BsArrowRepeat className="mr-2" />
-            {get(dataRefreshCaptions, get(props.dataSource, 'type', ''), "Refresh data")}
+            {get(dataRefreshCaptions, get(props.dataSource, 'type', ''), t('parsingOptions.refreshData'))}
           </Button>
         )}
 
         <div className="divider mb-3 mt-0" />
 
-        <b>DATA TRANSFORMATION</b>
+        <b>{t('parsingOptions.transformation')}</b>
 
         <StackSelector
-          title="Stack on"
+          title={t('parsingOptions.stackOn')}
           value={props.stackDimension}
           list={props.dimensions}
           onChange={(nextStackDimension) =>

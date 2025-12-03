@@ -1,0 +1,117 @@
+{
+  "app": {
+    "section1": "1. データを読み込む",
+    "section2": "2. チャートを選択",
+    "section3": "3. マッピング",
+    "section4": "4. カスタマイズ",
+    "section5": "5. エクスポート"
+  },
+  "header": {
+    "about": "概要",
+    "learning": "学習",
+    "github": "GitHub",
+    "reportIssue": "問題を報告",
+    "supportUs": "サポート"
+  },
+  "cookie": {
+    "message": "このウェブサイトはGoogle Analyticsを使用して匿名で閲覧データを収集しています。",
+    "learnMore": "詳細",
+    "gotIt": "了解"
+  },
+  "dataLoader": {
+    "paste": "データを貼り付け",
+    "pasteMessage": "他のアプリケーションやウェブサイトからデータをコピー＆ペーストしてください。表形式（TSV、CSV、DSV）またはJSONデータが使用できます。",
+    "upload": "データをアップロード",
+    "uploadMessage": "表形式（TSV、CSV、DSV）またはJSONデータを読み込めます。",
+    "sample": "サンプルデータを試す",
+    "sparql": "SPARQLクエリ",
+    "sparqlMessage": "SPARQLクエリでデータを読み込む",
+    "url": "URLから",
+    "urlMessage": "データへのWebアドレス（URL）を入力してください（例：公開Dropboxファイル、公開APIなど）。サーバーがCORS対応であることを確認してください。",
+    "project": "プロジェクトを開く",
+    "projectMessage": ".rawgraphsプロジェクトを読み込みます。",
+    "reset": "リセット",
+    "cancel": "キャンセル",
+    "changeData": "データを変更",
+    "successMessage": "{{count}}行（{{cells}}セル）が正常に解析されました。チャートを選択してください！",
+    "rows": "行",
+    "cells": "セル",
+    "parsed": "が正常に解析されました。チャートを選択してください！"
+  },
+  "parsingOptions": {
+    "title": "データ解析オプション",
+    "separator": "列区切り文字",
+    "thousandsSeparator": "桁区切り文字",
+    "decimalsSeparator": "小数点記号",
+    "dateLocale": "日付ロケール",
+    "refreshUrl": "URLからデータを更新",
+    "refreshSparql": "クエリからデータを更新",
+    "refreshData": "データを更新",
+    "transformation": "データ変換",
+    "stackOn": "スタック"
+  },
+  "chartSelector": {
+    "show": "表示",
+    "allCharts": "すべてのチャート",
+    "loadCustomChart": "カスタムチャートを読み込む",
+    "code": "コード",
+    "tutorial": "チュートリアル"
+  },
+  "exporter": {
+    "download": "ダウンロード"
+  },
+  "footer": {
+    "description": "RAWGraphsは、以下によって設計・開発されたオープンソースプロジェクトです：",
+    "and": "と"
+  },
+  "screenSizeAlert": {
+    "title": "新しいRAWGraphsへようこそ！",
+    "message": "RAWGraphs 2.0は大きな画面向けに設計されています！",
+    "messageSlightly": "RAWGraphs 2.0はもう少し大きな画面向けに設計されています！",
+    "resize": "ブラウザウィンドウのサイズを変更するか、",
+    "sendReminder": "リマインダーを送信",
+    "comeback": "して、後で再度アクセスしてください。",
+    "touchNotSupported": "タッチデバイスはまだ完全にはサポートされていません。",
+    "gotIt": "了解！"
+  },
+  "dataMapping": {
+    "dimensions": "ディメンション",
+    "chartVariables": "チャート変数",
+    "required": "必須",
+    "multiple": "複数可",
+    "dropHere": "ここにディメンションをドロップ",
+    "dropHereMultiple": "ここにディメンションをドロップ",
+    "dropAnotherHere": "別のディメンションをここにドロップ",
+    "rollUp": "ロールアップ"
+  },
+  "chartOptions": {
+    "artboard": "アートボード",
+    "width": "幅",
+    "height": "高さ",
+    "colors": "カラー",
+    "finalOutput": "最終出力は凡例を含めて{{width}}px × {{height}}pxになります。"
+  },
+  "customChartLoader": {
+    "title": "カスタムチャートを読み込む",
+    "loadFromFile": "ファイルから読み込む",
+    "importFromUrl": "URLからインポート",
+    "importFromNpm": "NPMからインポート",
+    "dragFile": "ファイルをここにドラッグするか",
+    "browse": "参照",
+    "fromComputer": "でコンピュータからファイルを選択",
+    "allAccepted": "すべてのファイルが受け入れられます",
+    "someRejected": "一部のファイルは拒否されます",
+    "loadYourChart": "チャートを読み込む",
+    "placeholderNpm": "NPMからUMDまたはAMD JSファイルを読み込む",
+    "placeholderUrl": "URLからUMDまたはAMD JSファイルを読み込む",
+    "importError": "カスタムチャートのインポート中にエラーが発生しました",
+    "documentation": "カスタムチャートの作成方法を知りたいですか？",
+    "checkDocs": "ドキュメントを確認"
+  },
+  "customChartWarn": {
+    "title": "警告！",
+    "message": "サードパーティのJavaScriptを実行しようとしています。自己責任で続行してください。",
+    "dontExecute": "実行しない",
+    "continue": "続行"
+  }
+}
