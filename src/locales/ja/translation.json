@@ -26,8 +26,15 @@
     "sample": "サンプルデータを試す",
     "sparql": "SPARQLクエリ",
     "sparqlMessage": "SPARQLクエリでデータを読み込む",
+    "sparqlEndpoint": "SPARQLエンドポイントを入力してください",
+    "sparqlQuery": "クエリを入力してください",
+    "runQuery": "クエリを実行",
     "url": "URLから",
     "urlMessage": "データへのWebアドレス（URL）を入力してください（例：公開Dropboxファイル、公開APIなど）。サーバーがCORS対応であることを確認してください。",
+    "loadData": "データを読み込む",
+    "loadingError": "読み込みエラー。",
+    "queryError": "指定されたエンドポイントでクエリを実行できませんでした",
+    "source": "ソース：",
     "project": "プロジェクトを開く",
     "projectMessage": ".rawgraphsプロジェクトを読み込みます。",
     "reset": "リセット",
@@ -36,7 +43,12 @@
     "successMessage": "{{count}}行（{{cells}}セル）が正常に解析されました。チャートを選択してください！",
     "rows": "行",
     "cells": "セル",
-    "parsed": "が正常に解析されました。チャートを選択してください！"
+    "parsed": "が正常に解析されました。チャートを選択してください！",
+    "parseErrorCheck": "{{row}}行目の{{column}}列を確認してください。",
+    "parseErrorAnother": "{{row}}行目にも問題があります。",
+    "parseErrorMore": "他に{{count}}行で問題があります。",
+    "parseErrorRemaining": "残りの{{count}}行は正常です。",
+    "parseErrorRemainingPlural": "残りの{{count}}行は正常です。"
   },
   "parsingOptions": {
     "title": "データ解析オプション",
@@ -82,7 +94,8 @@
     "dropHere": "ここにディメンションをドロップ",
     "dropHereMultiple": "ここにディメンションをドロップ",
     "dropAnotherHere": "別のディメンションをここにドロップ",
-    "rollUp": "ロールアップ"
+    "rollUp": "ロールアップ",
+    "mandatory": "必須"
   },
   "chartOptions": {
     "artboard": "アートボード",
@@ -113,5 +126,36 @@
     "message": "サードパーティのJavaScriptを実行しようとしています。自己責任で続行してください。",
     "dontExecute": "実行しない",
     "continue": "続行"
+  },
+  "dataMismatch": {
+    "warningParseError": "警告：解析エラー",
+    "warningMissingColumn": "警告：列が見つかりません",
+    "warningTypeMismatch": "警告：データ型の不一致",
+    "parseErrorMessage": "新しいデータの解析中にエラーが発生しました。",
+    "parseErrorAction": "新しいデータを読み込んでエラーを修正するか、以前のデータに戻ることができます。",
+    "missingColumnMessage": "このプロジェクトのデータマッピングには{{column}}ディメンションが必要ですが、新しいデータには見つかりません。",
+    "missingColumnAction": "新しいデータで新しいデータマッピングを作成するか、以前のデータに戻ることができます。",
+    "typeMismatchMessage": "このプロジェクトに設定されたデータ型は新しいデータに適用できません。",
+    "typeMismatchAction": "新しいデータを使用してデータ型を再設定するか、以前のデータに戻ることができます。",
+    "loadNewData": "新しいデータを読み込む",
+    "cancel": "キャンセル"
+  },
+  "clipboard": {
+    "copied": "クリップボードにコピーしました",
+    "copy": "クリップボードにコピー"
+  },
+  "colorScale": {
+    "resetDomain": "ドメインをリセット",
+    "invert": "反転",
+    "lockScale": "スケールをロック",
+    "unlockScale": "スケールのロックを解除"
+  },
+  "chartPreview": {
+    "requiredVariables": "必須チャート変数：マッピングが必要です",
+    "pleaseMap": "マッピングしてください",
+    "chartError": "チャートエラー。",
+    "dataTypeMismatch": "データ型の不一致：{{type}}型を{{name}}にマッピングできません。",
+    "atLeast": "少なくとも",
+    "dimensionsOn": "ディメンションを"
   }
 }

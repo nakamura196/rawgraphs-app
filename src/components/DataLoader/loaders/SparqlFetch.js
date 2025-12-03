@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import classNames from 'classnames'
 import S from './SparqlFetch.module.scss'
 import { html, render } from 'lit-html'
@@ -59,6 +60,7 @@ export default function SparqlFetch({
   setLoadingError,
   initialState,
 }) {
+  const { t } = useTranslation()
   const [url, setUrl] = useState(initialState?.url ?? 'https://query.wikidata.org/sparql')
   const [parsedQuery, setParsedQuery] = useState(null)
 
@@ -102,11 +104,9 @@ export default function SparqlFetch({
         })
       })
       .catch((err) => {
-        setLoadingError(
-          'It was not possible to execute the query on the given endpoint'
-        )
+        setLoadingError(t('dataLoader.queryError'))
       })
-  }, [parsedQuery, setLoadingError, setUserInput, url])
+  }, [parsedQuery, setLoadingError, setUserInput, url, t])
 
   useEffect(() => {
     const node = editorDomRef.current
@@ -125,7 +125,7 @@ export default function SparqlFetch({
   return (
     <>
       <div className={classNames(S['base-iri-input-here'])}>
-        <span>Write your SPARQL Endpoint here</span>
+        <span>{t('dataLoader.sparqlEndpoint')}</span>
       </div>
       <input
         className={classNames('w-100', S['url-input'])}
@@ -135,7 +135,7 @@ export default function SparqlFetch({
         }}
       />
       <div className={classNames(S['query-input-here'])}>
-        <span>Write your query here</span>
+        <span>{t('dataLoader.sparqlQuery')}</span>
       </div>
       <div ref={editorDomRef} />
       <div className="text-right">
@@ -144,7 +144,7 @@ export default function SparqlFetch({
           disabled={!parsedQuery || !url}
           onClick={onSubmit}
         >
-          Run query
+          {t('dataLoader.runQuery')}
         </button>
       </div>
     </>

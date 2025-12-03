@@ -26,8 +26,15 @@
     "sample": "Try our data samples",
     "sparql": "SPARQL query",
     "sparqlMessage": "Load data with a SparQL query",
+    "sparqlEndpoint": "Write your SPARQL Endpoint here",
+    "sparqlQuery": "Write your query here",
+    "runQuery": "Run query",
     "url": "From URL",
     "urlMessage": "Enter a web address (URL) pointing to the data (e.g. a public Dropbox file, a public API, ...). Please, be sure the server is CORS-enabled.",
+    "loadData": "Load data",
+    "loadingError": "Loading error.",
+    "queryError": "It was not possible to execute the query on the given endpoint",
+    "source": "Source:",
     "project": "Open your project",
     "projectMessage": "Load a .rawgraphs project.",
     "reset": "Reset",
@@ -36,7 +43,12 @@
     "successMessage": "{{count}} rows ({{cells}} cells) have been successfully parsed, now you can choose a chart!",
     "rows": "rows",
     "cells": "cells",
-    "parsed": "have been successfully parsed, now you can choose a chart!"
+    "parsed": "have been successfully parsed, now you can choose a chart!",
+    "parseErrorCheck": "Ops, please check row {{row}} at column {{column}}.",
+    "parseErrorAnother": "There's another issue at row {{row}}.",
+    "parseErrorMore": "There are issues in {{count}} more rows.",
+    "parseErrorRemaining": "The remaining {{count}} row looks fine.",
+    "parseErrorRemainingPlural": "The remaining {{count}} rows look fine."
   },
   "parsingOptions": {
     "title": "DATA PARSING OPTIONS",
@@ -82,7 +94,8 @@
     "dropHere": "Drop dimension here",
     "dropHereMultiple": "Drop dimensions here",
     "dropAnotherHere": "Drop another dimension here",
-    "rollUp": "Roll-up"
+    "rollUp": "Roll-up",
+    "mandatory": "Mandatory"
   },
   "chartOptions": {
     "artboard": "Artboard",
@@ -113,5 +126,36 @@
     "message": "You are about to execute third party JavaScript continue at your own risk.",
     "dontExecute": "Don't execute",
     "continue": "Continue"
+  },
+  "dataMismatch": {
+    "warningParseError": "Warning: parsing error",
+    "warningMissingColumn": "Warning: missing column",
+    "warningTypeMismatch": "Warning: data-type mismatch",
+    "parseErrorMessage": "There was an error while parsing new data.",
+    "parseErrorAction": "You can load the new data and try to fix the error or return to the data previously loaded.",
+    "missingColumnMessage": "The data mapping of this project requires the dimension {{column}}, that we can't find in the new data.",
+    "missingColumnAction": "You can create a new data mapping with the new data or return to the data previously loaded.",
+    "typeMismatchMessage": "The data-types previously set for this project can't be applied to the new data.",
+    "typeMismatchAction": "You can use the new data and re-set data-types or return to the data previously loaded.",
+    "loadNewData": "Load new data",
+    "cancel": "Cancel"
+  },
+  "clipboard": {
+    "copied": "Copied to clipboard",
+    "copy": "Copy to clipboard"
+  },
+  "colorScale": {
+    "resetDomain": "Reset domain",
+    "invert": "Invert",
+    "lockScale": "Lock scale",
+    "unlockScale": "Unlock scale"
+  },
+  "chartPreview": {
+    "requiredVariables": "Required chart variables: you need to map",
+    "pleaseMap": "Please map",
+    "chartError": "Chart error.",
+    "dataTypeMismatch": "Data-type mismatch: you can't map {{type}}s on {{name}}.",
+    "atLeast": "at least",
+    "dimensionsOn": "dimensions on"
   }
 }

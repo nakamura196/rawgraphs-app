@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import classNames from 'classnames'
 import S from './UrlFetch.module.scss'
 
@@ -14,6 +15,7 @@ export default function UrlFetch({
   setLoadingError,
   initialState = null,
 }) {
+  const { t } = useTranslation()
   const [url, setUrl] = useState(initialState?.url)
 
   const fetchUrl = useCallback(
@@ -25,10 +27,10 @@ export default function UrlFetch({
         setUserInput(data, source)
         setLoadingError(null)
       } catch (e) {
-        setLoadingError('Loading error. ' + e.message)
+        setLoadingError(t('dataLoader.loadingError') + ' ' + e.message)
       }
     },
-    [setLoadingError, setUserInput]
+    [setLoadingError, setUserInput, t]
   )
 
   const handleSubmit = useCallback(
@@ -56,7 +58,7 @@ export default function UrlFetch({
           disabled={!url}
           type="submit"
         >
-          Load data
+          {t('dataLoader.loadData')}
         </button>
       </div>
     </form>

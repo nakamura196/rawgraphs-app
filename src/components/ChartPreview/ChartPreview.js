@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import { chart as rawChart } from '@rawgraphs/rawgraphs-core'
 import useDebounce from '../../hooks/useDebounce'
 import WarningMessage from '../WarningMessage'
@@ -15,6 +16,7 @@ const ChartPreview = ({
   setRawViz,
   mappedData,
 }) => {
+  const { t } = useTranslation()
   const domRef = useRef(null)
 
   const vizOptionsDebounced = useDebounce(visualOptions, 200)
@@ -38,7 +40,7 @@ const ChartPreview = ({
     if (requiredVariables.length > 0) {
       let errorMessage = (
         <span>
-          Required chart variables: you need to map{' '}
+          {t('chartPreview.requiredVariables')}{' '}
           {requiredVariables
             .map((d, i) => <span key={i} className="font-weight-bold">{d.name}</span>)
             .reduce((prev, curr) => [prev, ' and ', curr])}
@@ -63,12 +65,12 @@ const ChartPreview = ({
     if (multivaluesVariables.length > 0) {
       let errorMessage = (
         <span>
-          Please map{' '}
+          {t('chartPreview.pleaseMap')}{' '}
           {multivaluesVariables
             .map((d) => (
               <>
-                at least <span className="font-weight-bold">{d.minValues}</span>{' '}
-                dimensions on <span className="font-weight-bold">{d.name}</span>
+                {t('chartPreview.atLeast')} <span className="font-weight-bold">{d.minValues}</span>{' '}
+                {t('chartPreview.dimensionsOn')} <span className="font-weight-bold">{d.name}</span>
               </>
             ))
             .reduce((prev, curr) => [prev, ' and ', curr])}
@@ -91,7 +93,7 @@ const ChartPreview = ({
         !mapping[variable].isValid
       ) {
         const variableObj = chart.dimensions.find((d) => d.id === variable)
-        const errorMessage = `Data-type mismatch: you can’t map ${mapping[variable].mappedType}s on ${variableObj.name}.`
+        const errorMessage = t('chartPreview.dataTypeMismatch', { type: mapping[variable].mappedType, name: variableObj.name })
         setError({ variant: 'danger', message: errorMessage })
         setRawViz(null)
         while (domRef.current.firstChild) {
@@ -124,7 +126,7 @@ const ChartPreview = ({
         onChartRendered(chart.metadata)
       } catch (e) {
         console.log("chart error", e)
-        setError({ variant: 'danger', message: 'Chart error. ' + e.message })
+        setError({ variant: 'danger', message: t('chartPreview.chartError') + ' ' + e.message })
         setRawViz(null)
       }
     } catch (e) {
@@ -132,11 +134,11 @@ const ChartPreview = ({
         domRef.current.removeChild(domRef.current.firstChild)
       }
       console.log({ e })
-      setError({ variant: 'danger', message: 'Chart error. ' + e.message })
+      setError({ variant: 'danger', message: t('chartPreview.chartError') + ' ' + e.message })
       setRawViz(null)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [setError, vizOptionsDebounced, setRawViz, mappedData, chart, mapping])
+  }, [setError, vizOptionsDebounced, setRawViz, mappedData, chart, mapping, t])
 
   return (
     <div className={'col-8 col-xl-9'}>

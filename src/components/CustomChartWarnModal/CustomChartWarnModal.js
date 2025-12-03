@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { Modal, Button } from 'react-bootstrap'
 
 export default function CustomChartWarnModal({
@@ -5,6 +6,7 @@ export default function CustomChartWarnModal({
   abortCustomChartLoad,
   confirmCustomChartLoad,
 }) {
+  const { t } = useTranslation()
   return (
     <Modal
       show={toConfirmCustomChart !== null}
@@ -16,13 +18,12 @@ export default function CustomChartWarnModal({
       contentClassName='border'
     >
       <Modal.Header closeButton>
-        <Modal.Title>Warning!</Modal.Title>
+        <Modal.Title>{t('customChartWarn.title')}</Modal.Title>
       </Modal.Header>
 
       <Modal.Body>
         <p>
-          You are about to execute third party JavaScript continue at your own
-          risk.
+          {t('customChartWarn.message')}
         </p>
         {toConfirmCustomChart && toConfirmCustomChart.type === 'project' && (
           <div
@@ -46,7 +47,7 @@ export default function CustomChartWarnModal({
             abortCustomChartLoad()
           }}
         >
-          Don't execute
+          {t('customChartWarn.dontExecute')}
         </Button>
         <Button
           variant="primary"
@@ -54,7 +55,7 @@ export default function CustomChartWarnModal({
             confirmCustomChartLoad()
           }}
         >
-          Continue
+          {t('customChartWarn.continue')}
         </Button>
       </Modal.Footer>
     </Modal>

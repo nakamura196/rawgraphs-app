@@ -212,30 +212,22 @@ function DataLoader({
     const column = Object.keys(errors[0].error)[0]
     return (
       <span>
-        Ops, please check <span className="font-weight-bold">row {row}</span> at
-        column <span className="font-weight-bold">{column}</span>.{' '}
+        {t('dataLoader.parseErrorCheck', { row, column })}{' '}
         {errors.length === 2 && (
           <>
-            {' '}
-            There's another issue at row{' '}
-            <span className="font-weight-bold">{errors[1].row + 1}</span>.{' '}
+            {t('dataLoader.parseErrorAnother', { row: errors[1].row + 1 })}{' '}
           </>
         )}
         {errors.length > 2 && (
           <>
-            {' '}
-            There are issues in{' '}
-            <span className="font-weight-bold">{errors.length - 1}</span> more
-            rows.{' '}
+            {t('dataLoader.parseErrorMore', { count: errors.length - 1 })}{' '}
           </>
         )}
         {successRows > 0 && (
           <>
-            The remaining{' '}
-            <span className="font-weight-bold">
-              {successRows} row{successRows > 1 && <>s</>}
-            </span>{' '}
-            look{successRows === 1 && <>s</>} fine.
+            {successRows === 1
+              ? t('dataLoader.parseErrorRemaining', { count: successRows })
+              : t('dataLoader.parseErrorRemainingPlural', { count: successRows })}
           </>
         )}
       </span>
@@ -378,13 +370,10 @@ function DataLoader({
                   variant="success"
                   message={
                     <span>
-                      <span className="font-weight-bold">
-                        {data.dataset.length} rows
-                      </span>{' '}
-                      (
-                      {data.dataset.length * Object.keys(data.dataTypes).length}{' '}
-                      cells) have been successfully parsed, now you can choose a
-                      chart!
+                      {t('dataLoader.successMessage', {
+                        count: data.dataset.length,
+                        cells: data.dataset.length * Object.keys(data.dataTypes).length
+                      })}
                     </span>
                   }
                   action={copyToClipboardButton}

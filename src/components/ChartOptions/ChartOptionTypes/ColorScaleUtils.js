@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { Tooltip, OverlayTrigger } from 'react-bootstrap'
 import {
   BsArrowCounterclockwise,
@@ -8,11 +9,12 @@ import {
 } from 'react-icons/bs'
 
 function ResetBtn({ resetScale }) {
+  const { t } = useTranslation()
   return (
     <OverlayTrigger
       key="bottom"
       placement="bottom"
-      overlay={<Tooltip id={`tooltip-top`}>Reset domain</Tooltip>}
+      overlay={<Tooltip id={`tooltip-top`}>{t('colorScale.resetDomain')}</Tooltip>}
     >
       <span type="button" className="btn" onClick={resetScale}>
         <BsArrowCounterclockwise width="16" height="16" />
@@ -22,11 +24,12 @@ function ResetBtn({ resetScale }) {
 }
 
 function InvertBtn({ invertScale }) {
+  const { t } = useTranslation()
   return (
     <OverlayTrigger
       key="bottom"
       placement="bottom"
-      overlay={<Tooltip id={`tooltip-top`}>Invert</Tooltip>}
+      overlay={<Tooltip id={`tooltip-top`}>{t('colorScale.invert')}</Tooltip>}
     >
       <span type="button" className="btn" onClick={invertScale}>
         <BsArrowLeftRight width="16" height="16" />
@@ -36,11 +39,12 @@ function InvertBtn({ invertScale }) {
 }
 
 function LockBtn({ handleChangeLocked, locked }) {
+  const { t } = useTranslation()
   return (
     <OverlayTrigger
       key="bottom"
       placement="bottom"
-      overlay={<Tooltip id={`tooltip-top`}>{locked ? 'Unlock' : 'Lock'} scale</Tooltip>}
+      overlay={<Tooltip id={`tooltip-top`}>{locked ? t('colorScale.unlockScale') : t('colorScale.lockScale')}</Tooltip>}
     >
       <span
         type="button"

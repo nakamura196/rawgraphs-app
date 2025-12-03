@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import useWindowSize from '../../hooks/useWindowSize'
 import { Modal, Button } from 'react-bootstrap'
 import { BsEnvelopeFill } from 'react-icons/bs'
@@ -6,6 +7,7 @@ import { BsEnvelopeFill } from 'react-icons/bs'
 // import styles from './ScreenSizeAlert.module.scss'
 
 function ScreenSizeAlert() {
+  const { t } = useTranslation()
   const size = useWindowSize()
   const [showModal, setShowModal] = useState(size.width < 992)
   const [modalWasClosed, setModalWasClosed] = useState(false)
@@ -37,26 +39,25 @@ function ScreenSizeAlert() {
           <span role="img" aria-label="Party icon">
             🎉
           </span>{' '}
-          Welcome to the new RAWGraphs!
+          {t('screenSizeAlert.title')}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <p className="big">
-          RAWGraphs 2.0 is designed for {size.width >= 768 ? 'slightly ' : ' '}
-          bigger screens!
+          {size.width >= 768 ? t('screenSizeAlert.messageSlightly') : t('screenSizeAlert.message')}
         </p>
         <p>
-          Resize your browser window or{' '}
+          {t('screenSizeAlert.resize')}{' '}
           <a href="mailto:?subject=Visit+RAWGraphs+2.0&body=Hello%21%0D%0APlease+do+not+forget+to+take+a+look+at+the+new+version+of+RAWGraphs%21%0D%0A%0D%0AVisit%3A+https%3A%2F%2Fdev.rawgraphs.io%2F%0D%0A%0D%0ASee+you+later%2C%0D%0AThe+RAWGraphs+Team">
-            <BsEnvelopeFill /> send yourself a reminder
+            <BsEnvelopeFill /> {t('screenSizeAlert.sendReminder')}
           </a>{' '}
-          to come back at a better time.
+          {t('screenSizeAlert.comeback')}
         </p>
-        <p>Touch devices are not fully supported yet.</p>
+        <p>{t('screenSizeAlert.touchNotSupported')}</p>
       </Modal.Body>
       <Modal.Footer>
         <Button variant="primary" onClick={handleClose}>
-          Got it!
+          {t('screenSizeAlert.gotIt')}
         </Button>
       </Modal.Footer>
     </Modal>

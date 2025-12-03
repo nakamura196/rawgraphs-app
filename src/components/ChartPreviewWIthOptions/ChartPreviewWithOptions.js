@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Row } from 'react-bootstrap'
 import ChartOptions from '../ChartOptions'
 import ChartPreview from '../ChartPreview'
@@ -16,7 +17,8 @@ const ChartPreviewWithOptions = ({
   setRawViz,
   setMappingLoading,
 }) => {
-  const [error, setError] = useState({variant: "secondary", message: "Required chart variables"})
+  const { t } = useTranslation()
+  const [error, setError] = useState({variant: "secondary", message: t('chartPreview.requiredVariables')})
   const [mappedData, setMappedData] = useState(null)
 
   useEffect(() => {

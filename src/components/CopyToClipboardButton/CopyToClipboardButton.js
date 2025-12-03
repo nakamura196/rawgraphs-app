@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Button } from 'react-bootstrap'
 import { BsClipboard } from 'react-icons/bs'
 import { IoMdCheckmarkCircle } from 'react-icons/io'
@@ -6,6 +7,7 @@ import { useCopyToClipboard } from '../../hooks/useCopyToClipboard'
 import style from './style.module.css'
 
 export function CopyToClipboardButton({ content }) {
+  const { t } = useTranslation()
   const copyToClipboard = useCopyToClipboard()
   const [pending, setPending] = useState(false)
 
@@ -28,13 +30,13 @@ export function CopyToClipboardButton({ content }) {
       {pending && (
         <>
           <IoMdCheckmarkCircle className="text-success" />
-          <span className="ml-2">Copied to clipboard</span>
+          <span className="ml-2">{t('clipboard.copied')}</span>
         </>
       )}
       {!pending && (
         <>
           <BsClipboard />
-          <span className="ml-2">Copy to clipboard</span>
+          <span className="ml-2">{t('clipboard.copy')}</span>
         </>
       )}
     </Button>

@@ -1,11 +1,12 @@
 import classNames from 'classnames'
 import React, { memo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Button, Modal } from 'react-bootstrap'
 import { useDropzone } from 'react-dropzone'
 import { BsCloud, BsUpload } from 'react-icons/bs'
 import styles from './CustomChartLoader.module.scss'
 
-function LoadFromFile({ loading, load }) {
+function LoadFromFile({ loading, load, t }) {
   function onDrop(acceptedFiles) {
     if (acceptedFiles.length) {
       load(acceptedFiles[0])
@@ -31,20 +32,20 @@ function LoadFromFile({ loading, load }) {
       {...getRootProps()}
     >
       <input {...getInputProps()} />
-      <span>Drag a file here or </span>
+      <span>{t('customChartLoader.dragFile')} </span>
       <Button className={styles['browse-button']} color="primary">
-        Browse
+        {t('customChartLoader.browse')}
       </Button>
-      <span>a file from your computer</span>
+      <span>{t('customChartLoader.fromComputer')}</span>
       <div className={styles.dropin}>
-        {isDragAccept && <p>All files will be accepted</p>}
-        {isDragReject && <p>Some files will be rejected</p>}
+        {isDragAccept && <p>{t('customChartLoader.allAccepted')}</p>}
+        {isDragReject && <p>{t('customChartLoader.someRejected')}</p>}
       </div>
     </div>
   )
 }
 
-function LoadFromString({ load, loading, placeholder }) {
+function LoadFromString({ load, loading, placeholder, t }) {
   const [value, setValue] = useState('')
   return (
     <form
@@ -68,7 +69,7 @@ function LoadFromString({ load, loading, placeholder }) {
           className="btn btn-primary"
           onClick={() => {}}
         >
-          Load your chart
+          {t('customChartLoader.loadYourChart')}
         </button>
       </div>
     </form>
@@ -80,6 +81,7 @@ function CustomChartLoaderForm({
   loadCustomChartsFromUrl,
   loadCustomChartsFromNpm,
   onClose,
+  t,
 }) {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
@@ -115,7 +117,7 @@ function CustomChartLoaderForm({
           )}
         >
           <BsUpload className="w-25" />
-          <h4 className="m-0 d-inline-block">Load from file</h4>
+          <h4 className="m-0 d-inline-block">{t('customChartLoader.loadFromFile')}</h4>
         </div>
         <div
           onClick={() => changeImportType('url')}
@@ -128,7 +130,7 @@ function CustomChartLoaderForm({
           )}
         >
           <BsCloud className="w-25" />
-          <h4 className="m-0 d-inline-block">Import from URL</h4>
+          <h4 className="m-0 d-inline-block">{t('customChartLoader.importFromUrl')}</h4>
         </div>
         <div
           onClick={() => changeImportType('npm')}
@@ -141,7 +143,7 @@ function CustomChartLoaderForm({
           )}
         >
           <BsCloud className="w-25" />
-          <h4 className="m-0 d-inline-block">Import from NPM</h4>
+          <h4 className="m-0 d-inline-block">{t('customChartLoader.importFromNpm')}</h4>
         </div>
       </div>
       <div className="col-md-8">
@@ -154,7 +156,8 @@ function CustomChartLoaderForm({
               loadCustomChartsFromNpm(pkg).then(onClose, handleError)
             }}
             key="npm"
-            placeholder={'Load UMD or AMD JS File from NPM'}
+            placeholder={t('customChartLoader.placeholderNpm')}
+            t={t}
           />
         )}
         {type === 'url' && (
@@ -166,7 +169,8 @@ function CustomChartLoaderForm({
               loadCustomChartsFromUrl(url).then(onClose, handleError)
             }}
             key="url"
-            placeholder={'Load UMD or AMD JS File from URL'}
+            placeholder={t('customChartLoader.placeholderUrl')}
+            t={t}
           />
         )}
         {type === 'file' && (
@@ -178,12 +182,13 @@ function CustomChartLoaderForm({
               uploadCustomCharts(url).then(onClose, handleError)
             }}
             key="url"
-            placeholder={'Load UMD or AMD JS File from URL'}
+            placeholder={t('customChartLoader.placeholderUrl')}
+            t={t}
           />
         )}
         {error && (
           <div className="alert alert-danger mt-2">
-            Error during custom chart import
+            {t('customChartLoader.importError')}
           </div>
         )}
       </div>
@@ -192,6 +197,7 @@ function CustomChartLoaderForm({
 }
 
 function CustomChartLoader({ isOpen, onClose, ...props }) {
+  const { t } = useTranslation()
   return (
     <Modal
       show={isOpen}
@@ -204,17 +210,17 @@ function CustomChartLoader({ isOpen, onClose, ...props }) {
       contentClassName="bg-white"
     >
       <Modal.Header closeButton>
-        <Modal.Title>Load custom chart</Modal.Title>
+        <Modal.Title>{t('customChartLoader.title')}</Modal.Title>
       </Modal.Header>
 
       <Modal.Body>
-        <CustomChartLoaderForm {...props} onClose={onClose} />
+        <CustomChartLoaderForm {...props} onClose={onClose} t={t} />
       </Modal.Body>
       <Modal.Footer>
         <div className='text-center w-100'>
-          Do you want to know how to create a custom chart?{' '}
+          {t('customChartLoader.documentation')}{' '}
           <a href="https://rawgraphs.io" target="_blank" rel="noreferrer">
-            Check our documentation
+            {t('customChartLoader.checkDocs')}
           </a>
         </div>
       </Modal.Footer>

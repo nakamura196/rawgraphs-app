@@ -1,4 +1,5 @@
 import React, { useCallback, useState, useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Row, Col } from 'react-bootstrap'
 import {
   getOptionsConfig,
@@ -202,6 +203,7 @@ const ChartOptions = ({
   error,
   mappedData,
 }) => {
+  const { t } = useTranslation()
   const optionsConfig = useMemo(() => {
     return getOptionsConfig(chart?.visualOptions)
   }, [chart])
@@ -355,8 +357,7 @@ const ChartOptions = ({
             })}
             {groupName === 'artboard' && visualOptions.showLegend && (
               <p className="small">
-                The final output will be {containerOptions?.width}px *{' '}
-                {containerOptions?.height}px including the legend.
+                {t('chartOptions.finalOutput', { width: containerOptions?.width, height: containerOptions?.height })}
               </p>
             )}
           </div>

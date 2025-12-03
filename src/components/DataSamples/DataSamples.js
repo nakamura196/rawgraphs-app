@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { Row, Col, Card } from 'react-bootstrap'
 import styles from './DataSamples.module.scss'
 
@@ -252,13 +253,14 @@ const samplesList = [
   // },
 ]
 export default function DataSamples({ onSampleReady, setLoadingError }) {
+  const { t } = useTranslation()
   const select = async (sample) => {
     const { delimiter, url } = sample
     let response
     try {
       response = await fetch(url)
     } catch (e) {
-      setLoadingError('Loading error. ' + e.message)
+      setLoadingError(t('dataLoader.loadingError') + ' ' + e.message)
       return
     }
     const text = await response.text()
@@ -289,7 +291,7 @@ export default function DataSamples({ onSampleReady, setLoadingError }) {
                   href={d.sourceURL}
                   className={[styles['dataset-source']].join(' ')}
                 >
-                  Source: {d.sourceName}
+                  {t('dataLoader.source')} {d.sourceName}
                 </a>
               </Card>
             </Col>
