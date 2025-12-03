@@ -38,7 +38,7 @@
     "react-icons": "^3.10.0",
     "react-scripts": "^4.0.3",
     "sparql-http-client": "^2.4.0",
-    "sparqljs": "^3.5.1",
+    "sparqljs": "^3.4.2",
     "typeface-inter": "^3.12.0",
     "worker-loader": "^3.0.2"
   },
