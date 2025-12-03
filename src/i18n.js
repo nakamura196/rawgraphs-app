@@ -13,8 +13,8 @@ const resources = {
   }
 }
 
-// Get saved language from localStorage or default to 'en'
-const savedLanguage = localStorage.getItem('i18nextLng') || 'en'
+// Get saved language from localStorage or default to 'ja'
+const savedLanguage = localStorage.getItem('i18nextLng') || 'ja'
 
 i18n
   .use(initReactI18next)
