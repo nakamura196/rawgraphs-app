@@ -1,102 +1,102 @@
 オーケストラ種別	グループ	楽器	人数
-Modern orchestra	Brass	Baritone horn	1
-Early Romantic orchestra	Woodwinds	Bass Clarinet	1
-Late Romantic orchestra	Woodwinds	Bass Clarinet	1
-Early Romantic orchestra	Percussion	Bass Drum	1
-Late Romantic orchestra	Percussion	Bass Drum	1
-Modern orchestra	Percussion	Bass Drum	1
-Classical orchestra	Woodwinds	Bassoons	2
-Early Romantic orchestra	Woodwinds	Bassoons	2
-Late Romantic orchestra	Woodwinds	Bassoons	3
-Modern orchestra	Woodwinds	Bassoons	4
-Late Romantic orchestra	Keyboards	Celesta	1
-Modern orchestra	Keyboards	Celesta	1
-Classical orchestra	Strings	Cellos	2
-Early Romantic orchestra	Strings	Cellos	8
-Late Romantic orchestra	Strings	Cellos	10
-Modern orchestra	Strings	Cellos	12
-Late Romantic orchestra	Percussion	Chimes	1
-Classical orchestra	Woodwinds	Clarinets	2
-Modern orchestra	Woodwinds	Clarinets	4
-Early Romantic orchestra	Woodwinds	Clarinets	2
-Late Romantic orchestra	Woodwinds	Clarinets	3
-Early Romantic orchestra	Woodwinds	Contrabassoon	1
-Late Romantic orchestra	Woodwinds	Contrabassoon	1
-Early Romantic orchestra	Brass	Cornet	2
-Early Romantic orchestra	Percussion	Cymbals	1
-Late Romantic orchestra	Percussion	Cymbals	1
-Modern orchestra	Percussion	Cymbals	1
-Classical orchestra	Strings	Double basses	1
-Early Romantic orchestra	Strings	Double basses	6
-Late Romantic orchestra	Strings	Double basses	8
-Modern orchestra	Strings	Double basses	10
-Early Romantic orchestra	Woodwinds	English Horn	1
-Late Romantic orchestra	Woodwinds	English Horn	1
-Classical orchestra	Woodwinds	Flutes	2
-Early Romantic orchestra	Woodwinds	Flutes	2
-Late Romantic orchestra	Woodwinds	Flutes	3
-Modern orchestra	Woodwinds	Flutes	4
-Classical orchestra	Brass	French Horns	4
-Early Romantic orchestra	Brass	French Horns	4
-Late Romantic orchestra	Brass	French Horns	8
-Modern orchestra	Brass	French Horns	8
-Early Romantic orchestra	Percussion	Glockenspiel	1
-Late Romantic orchestra	Percussion	Glockenspiel	1
-Modern orchestra	Percussion	Glockenspiel	1
-Early Romantic orchestra	Strings	Harps	1
-Late Romantic orchestra	Strings	Harps	2
-Modern orchestra	Strings	Harps	2
-Modern orchestra	Percussion	Marimba	1
-Classical orchestra	Woodwinds	Oboes	2
-Early Romantic orchestra	Woodwinds	Oboes	2
-Late Romantic orchestra	Woodwinds	Oboes	3
-Modern orchestra	Woodwinds	Oboes	4
-Late Romantic orchestra	Keyboards	Piano	1
-Modern orchestra	Keyboards	Piano	1
-Early Romantic orchestra	Woodwinds	Piccolo	1
-Late Romantic orchestra	Woodwinds	Piccolo	1
-Modern orchestra	Keyboards	Pipe organ	1
-Early Romantic orchestra	Percussion	Snare Drum	1
-Late Romantic orchestra	Percussion	Snare Drum	1
-Modern orchestra	Percussion	Snare Drum	1
-Late Romantic orchestra	Percussion	Tam-tam	1
-Modern orchestra	Percussion	Tam-tam	1
-Early Romantic orchestra	Percussion	Tambourine	1
-Late Romantic orchestra	Percussion	Tambourine	1
-Modern orchestra	Percussion	Tambourine	1
-Modern orchestra	Percussion	Tenor drum	1
-Classical orchestra	Percussion	Timpani	2
-Early Romantic orchestra	Percussion	Timpani	3
-Late Romantic orchestra	Percussion	Timpani	4
-Modern orchestra	Percussion	Timpani	1
-Early Romantic orchestra	Percussion	Triangle	1
-Late Romantic orchestra	Percussion	Triangle	1
-Modern orchestra	Percussion	Triangle	1
-Early Romantic orchestra	Brass	Trombones	3
-Late Romantic orchestra	Brass	Trombones	4
-Modern orchestra	Brass	Trombones	6
-Classical orchestra	Brass	Trumpets	2
-Early Romantic orchestra	Brass	Trumpets	2
-Late Romantic orchestra	Brass	Trumpets	4
-Modern orchestra	Brass	Trumpets	6
-Early Romantic orchestra	Brass	Tubas	1
-Late Romantic orchestra	Brass	Tubas	2
-Modern orchestra	Brass	Tubas	2
-Modern orchestra	Percussion	Tubular bells	1
-Modern orchestra	Percussion	Vibraphone	1
-Classical orchestra	Strings	Violas	4
-Early Romantic orchestra	Strings	Violas	10
-Late Romantic orchestra	Strings	Violas	12
-Modern orchestra	Strings	Violas	14
-Classical orchestra	Strings	Violins 1	6
-Early Romantic orchestra	Strings	Violins 1	14
-Late Romantic orchestra	Strings	Violins 1	16
-Modern orchestra	Strings	Violins 1	18
-Classical orchestra	Strings	Violins 2	6
-Early Romantic orchestra	Strings	Violins 2	12
-Late Romantic orchestra	Strings	Violins 2	14
-Modern orchestra	Strings	Violins 2	16
-Late Romantic orchestra	Brass	Wagner Tuba	1
-Modern orchestra	Percussion	Wood block	1
-Late Romantic orchestra	Percussion	Xylophone	1
-Modern orchestra	Percussion	Xylophone	1
+現代オーケストラ	金管楽器	バリトンホルン	1
+初期ロマン派オーケストラ	木管楽器	バスクラリネット	1
+後期ロマン派オーケストラ	木管楽器	バスクラリネット	1
+初期ロマン派オーケストラ	打楽器	バスドラム	1
+後期ロマン派オーケストラ	打楽器	バスドラム	1
+現代オーケストラ	打楽器	バスドラム	1
+古典派オーケストラ	木管楽器	ファゴット	2
+初期ロマン派オーケストラ	木管楽器	ファゴット	2
+後期ロマン派オーケストラ	木管楽器	ファゴット	3
+現代オーケストラ	木管楽器	ファゴット	4
+後期ロマン派オーケストラ	鍵盤楽器	チェレスタ	1
+現代オーケストラ	鍵盤楽器	チェレスタ	1
+古典派オーケストラ	弦楽器	チェロ	2
+初期ロマン派オーケストラ	弦楽器	チェロ	8
+後期ロマン派オーケストラ	弦楽器	チェロ	10
+現代オーケストラ	弦楽器	チェロ	12
+後期ロマン派オーケストラ	打楽器	チャイム	1
+古典派オーケストラ	木管楽器	クラリネット	2
+現代オーケストラ	木管楽器	クラリネット	4
+初期ロマン派オーケストラ	木管楽器	クラリネット	2
+後期ロマン派オーケストラ	木管楽器	クラリネット	3
+初期ロマン派オーケストラ	木管楽器	コントラファゴット	1
+後期ロマン派オーケストラ	木管楽器	コントラファゴット	1
+初期ロマン派オーケストラ	金管楽器	コルネット	2
+初期ロマン派オーケストラ	打楽器	シンバル	1
+後期ロマン派オーケストラ	打楽器	シンバル	1
+現代オーケストラ	打楽器	シンバル	1
+古典派オーケストラ	弦楽器	コントラバス	1
+初期ロマン派オーケストラ	弦楽器	コントラバス	6
+後期ロマン派オーケストラ	弦楽器	コントラバス	8
+現代オーケストラ	弦楽器	コントラバス	10
+初期ロマン派オーケストラ	木管楽器	イングリッシュホルン	1
+後期ロマン派オーケストラ	木管楽器	イングリッシュホルン	1
+古典派オーケストラ	木管楽器	フルート	2
+初期ロマン派オーケストラ	木管楽器	フルート	2
+後期ロマン派オーケストラ	木管楽器	フルート	3
+現代オーケストラ	木管楽器	フルート	4
+古典派オーケストラ	金管楽器	フレンチホルン	4
+初期ロマン派オーケストラ	金管楽器	フレンチホルン	4
+後期ロマン派オーケストラ	金管楽器	フレンチホルン	8
+現代オーケストラ	金管楽器	フレンチホルン	8
+初期ロマン派オーケストラ	打楽器	グロッケンシュピール	1
+後期ロマン派オーケストラ	打楽器	グロッケンシュピール	1
+現代オーケストラ	打楽器	グロッケンシュピール	1
+初期ロマン派オーケストラ	弦楽器	ハープ	1
+後期ロマン派オーケストラ	弦楽器	ハープ	2
+現代オーケストラ	弦楽器	ハープ	2
+現代オーケストラ	打楽器	マリンバ	1
+古典派オーケストラ	木管楽器	オーボエ	2
+初期ロマン派オーケストラ	木管楽器	オーボエ	2
+後期ロマン派オーケストラ	木管楽器	オーボエ	3
+現代オーケストラ	木管楽器	オーボエ	4
+後期ロマン派オーケストラ	鍵盤楽器	ピアノ	1
+現代オーケストラ	鍵盤楽器	ピアノ	1
+初期ロマン派オーケストラ	木管楽器	ピッコロ	1
+後期ロマン派オーケストラ	木管楽器	ピッコロ	1
+現代オーケストラ	鍵盤楽器	パイプオルガン	1
+初期ロマン派オーケストラ	打楽器	スネアドラム	1
+後期ロマン派オーケストラ	打楽器	スネアドラム	1
+現代オーケストラ	打楽器	スネアドラム	1
+後期ロマン派オーケストラ	打楽器	タムタム	1
+現代オーケストラ	打楽器	タムタム	1
+初期ロマン派オーケストラ	打楽器	タンバリン	1
+後期ロマン派オーケストラ	打楽器	タンバリン	1
+現代オーケストラ	打楽器	タンバリン	1
+現代オーケストラ	打楽器	テナードラム	1
+古典派オーケストラ	打楽器	ティンパニ	2
+初期ロマン派オーケストラ	打楽器	ティンパニ	3
+後期ロマン派オーケストラ	打楽器	ティンパニ	4
+現代オーケストラ	打楽器	ティンパニ	1
+初期ロマン派オーケストラ	打楽器	トライアングル	1
+後期ロマン派オーケストラ	打楽器	トライアングル	1
+現代オーケストラ	打楽器	トライアングル	1
+初期ロマン派オーケストラ	金管楽器	トロンボーン	3
+後期ロマン派オーケストラ	金管楽器	トロンボーン	4
+現代オーケストラ	金管楽器	トロンボーン	6
+古典派オーケストラ	金管楽器	トランペット	2
+初期ロマン派オーケストラ	金管楽器	トランペット	2
+後期ロマン派オーケストラ	金管楽器	トランペット	4
+現代オーケストラ	金管楽器	トランペット	6
+初期ロマン派オーケストラ	金管楽器	チューバ	1
+後期ロマン派オーケストラ	金管楽器	チューバ	2
+現代オーケストラ	金管楽器	チューバ	2
+現代オーケストラ	打楽器	チューブラーベル	1
+現代オーケストラ	打楽器	ヴィブラフォン	1
+古典派オーケストラ	弦楽器	ヴィオラ	4
+初期ロマン派オーケストラ	弦楽器	ヴィオラ	10
+後期ロマン派オーケストラ	弦楽器	ヴィオラ	12
+現代オーケストラ	弦楽器	ヴィオラ	14
+古典派オーケストラ	弦楽器	第1ヴァイオリン	6
+初期ロマン派オーケストラ	弦楽器	第1ヴァイオリン	14
+後期ロマン派オーケストラ	弦楽器	第1ヴァイオリン	16
+現代オーケストラ	弦楽器	第1ヴァイオリン	18
+古典派オーケストラ	弦楽器	第2ヴァイオリン	6
+初期ロマン派オーケストラ	弦楽器	第2ヴァイオリン	12
+後期ロマン派オーケストラ	弦楽器	第2ヴァイオリン	14
+現代オーケストラ	弦楽器	第2ヴァイオリン	16
+後期ロマン派オーケストラ	金管楽器	ワーグナーチューバ	1
+現代オーケストラ	打楽器	ウッドブロック	1
+後期ロマン派オーケストラ	打楽器	シロフォン	1
+現代オーケストラ	打楽器	シロフォン	1

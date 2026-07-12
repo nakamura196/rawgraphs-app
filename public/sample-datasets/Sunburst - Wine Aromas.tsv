@@ -1,73 +1,73 @@
 ルート	カテゴリ	タイプ	香り	結果
-Aromas	Fruits White Wine	Citrus	Grapefruit	712000
-Aromas	Fruits White Wine	Citrus	Lemon	5040000
-Aromas	Fruits White Wine	Citrus	Lime	2920000
-Aromas	Fruits White Wine	Citrus	Mandarine	26200
-Aromas	Fruits White Wine	Tree Fruits	Pear	1050000
-Aromas	Fruits White Wine	Tree Fruits	Apple	122000
-Aromas	Fruits White Wine	Tree Fruits	Green Apple	955000
-Aromas	Fruits White Wine	Tree Fruits	Peach	1560000
-Aromas	Fruits White Wine	Tropical Fruits	Melon	539000
-Aromas	Fruits White Wine	Tropical Fruits	Guava	151000
-Aromas	Fruits White Wine	Tropical Fruits	Pineapple	2050000
-Aromas	Fruits White Wine	Tropical Fruits	Passion Fruit	926000
-Aromas	Fruits White Wine	Tropical Fruits	Lychee	107000
-Aromas	Fruits Red Wine	Red Berries	Redcurrant	38000
-Aromas	Fruits Red Wine	Red Berries	Blackcurrant	81900
-Aromas	Fruits Red Wine	Red Berries	Strawberry	2320000
-Aromas	Fruits Red Wine	Red Berries	Blackberry	630000
-Aromas	Fruits Red Wine	Tree Fruits	Cherry	2400000
-Aromas	Fruits Red Wine	Tree Fruits	Plum	945000
-Aromas	Floral	Honeysuckle		86100
-Aromas	Floral	Hawthorn		80100
-Aromas	Floral	Orange Blossom		35300000
-Aromas	Floral	Linden		72100
-Aromas	Floral	Jasmine		399000
-Aromas	Floral	Acacia		79200
-Aromas	Floral	Violet		255000
-Aromas	Floral	Lavender		484000
-Aromas	Floral	Rose		123000
-Aromas	Vegetal	Vegetables	Green Pepper	34800000
-Aromas	Vegetal	Vegetables	Tomato	3980000
-Aromas	Vegetal	Fresh Herbs	Cut Grass	34400000
-Aromas	Vegetal	Fresh Herbs	Dill	1130000
-Aromas	Vegetal	Fresh Herbs	Thyme	1860000
-Aromas	Vegetal	Fresh Herbs	Mint	1860000
-Aromas	Vegetal	Dried Herbs	Tabacco	22800
-Aromas	Vegetal	Dried Herbs	Hay	180000
-Aromas	Vegetal	Leaves	Blackcurrant Leaf	34200000
-Aromas	Vegetal	Leaves	Eucalyptus	80100
-Bouquet	Mineral	Young White Wine	Flint	95100
-Bouquet	Mineral	Aged White Wine	Kerosene	35300
-Bouquet	Mineral	Aged Red Wine	Tar	96100
-Bouquet	Yeast	Bread		5600000
-Bouquet	Malolactic Fermentation	Yoghurt		244000
-Bouquet	Malolactic Fermentation	Butter		5880000
-Bouquet	Oak Aging	Smoked		2290000
-Bouquet	Oak Aging	Coffee		160000
-Bouquet	Oak Aging	Toast		2620000
-Bouquet	Oak Aging	Woods	Pine	943000
-Bouquet	Oak Aging	Woods	Cedar	383000
-Bouquet	Oak Aging	Woods	Sandalwood	44700
-Bouquet	Oak Aging	Woods	Oak	234000
-Bouquet	Oak Aging	Nuts	Almond	1860000
-Bouquet	Oak Aging	Nuts	Hazelnut	429000
-Bouquet	Oak Aging	Nuts	Coconut	2690000
-Bouquet	Late Harvest / Botrytis	Dry Apricot		34200000
-Bouquet	Late Harvest / Botrytis	Orange Peel		34900000
-Bouquet	Fortified Wine	Prune		107000
-Bouquet	Aged White Wine	Honey		3930000
-Bouquet	Aged Red Wine	Chocolate		144000
-Bouquet	Aged Red Wine	Animal		174000
-Bouquet	Aged Red Wine	Leather		191000
-Bouquet	Aged Red Wine	Musk		71600
-Faults	Trichloroanisole	Corked		64300
-Faults	Oxygen	Sherry		1140000
-Faults	Heat	Madeira		230000
-Faults	Volatile Acidity	Ethyl Acetate	Nail Polish Remover	34500000
-Faults	Volatile Acidity	Acetic Acid	Vinegar	3470000
-Faults	Sulfides	Dimethyl Sulfide	Sweet Corn	35600000
-Faults	Sulfides	Ethyl Mercaptan	Onion	4740000
-Faults	Sulfides	Hudrogen Sulfide	Rotten Egg	34300000
-Faults	Sulfides	Sulfer Dioxide	Rubber	236000
-Faults	Brett	Ethyl-phenol	Old band-aid	34200000
+アロマ	白ワインの果実香	柑橘	グレープフルーツ	712000
+アロマ	白ワインの果実香	柑橘	レモン	5040000
+アロマ	白ワインの果実香	柑橘	ライム	2920000
+アロマ	白ワインの果実香	柑橘	マンダリン	26200
+アロマ	白ワインの果実香	樹上果実	洋ナシ	1050000
+アロマ	白ワインの果実香	樹上果実	リンゴ	122000
+アロマ	白ワインの果実香	樹上果実	青リンゴ	955000
+アロマ	白ワインの果実香	樹上果実	桃	1560000
+アロマ	白ワインの果実香	トロピカルフルーツ	メロン	539000
+アロマ	白ワインの果実香	トロピカルフルーツ	グアバ	151000
+アロマ	白ワインの果実香	トロピカルフルーツ	パイナップル	2050000
+アロマ	白ワインの果実香	トロピカルフルーツ	パッションフルーツ	926000
+アロマ	白ワインの果実香	トロピカルフルーツ	ライチ	107000
+アロマ	赤ワインの果実香	赤いベリー	レッドカラント	38000
+アロマ	赤ワインの果実香	赤いベリー	カシス	81900
+アロマ	赤ワインの果実香	赤いベリー	イチゴ	2320000
+アロマ	赤ワインの果実香	赤いベリー	ブラックベリー	630000
+アロマ	赤ワインの果実香	樹上果実	チェリー	2400000
+アロマ	赤ワインの果実香	樹上果実	プラム	945000
+アロマ	花の香り	スイカズラ		86100
+アロマ	花の香り	サンザシ		80100
+アロマ	花の香り	オレンジの花		35300000
+アロマ	花の香り	菩提樹		72100
+アロマ	花の香り	ジャスミン		399000
+アロマ	花の香り	アカシア		79200
+アロマ	花の香り	スミレ		255000
+アロマ	花の香り	ラベンダー		484000
+アロマ	花の香り	バラ		123000
+アロマ	植物香	野菜	ピーマン	34800000
+アロマ	植物香	野菜	トマト	3980000
+アロマ	植物香	フレッシュハーブ	刈りたての草	34400000
+アロマ	植物香	フレッシュハーブ	ディル	1130000
+アロマ	植物香	フレッシュハーブ	タイム	1860000
+アロマ	植物香	フレッシュハーブ	ミント	1860000
+アロマ	植物香	ドライハーブ	タバコ	22800
+アロマ	植物香	ドライハーブ	干し草	180000
+アロマ	植物香	葉	カシスの葉	34200000
+アロマ	植物香	葉	ユーカリ	80100
+ブーケ	ミネラル	若い白ワイン	火打石	95100
+ブーケ	ミネラル	熟成白ワイン	灯油	35300
+ブーケ	ミネラル	熟成赤ワイン	タール	96100
+ブーケ	酵母	パン		5600000
+ブーケ	マロラクティック発酵	ヨーグルト		244000
+ブーケ	マロラクティック発酵	バター		5880000
+ブーケ	樽熟成	燻製		2290000
+ブーケ	樽熟成	コーヒー		160000
+ブーケ	樽熟成	トースト		2620000
+ブーケ	樽熟成	木材	松	943000
+ブーケ	樽熟成	木材	杉	383000
+ブーケ	樽熟成	木材	白檀	44700
+ブーケ	樽熟成	木材	オーク	234000
+ブーケ	樽熟成	ナッツ	アーモンド	1860000
+ブーケ	樽熟成	ナッツ	ヘーゼルナッツ	429000
+ブーケ	樽熟成	ナッツ	ココナッツ	2690000
+ブーケ	遅摘み・貴腐	ドライアプリコット		34200000
+ブーケ	遅摘み・貴腐	オレンジピール		34900000
+ブーケ	酒精強化ワイン	プルーン		107000
+ブーケ	熟成白ワイン	蜂蜜		3930000
+ブーケ	熟成赤ワイン	チョコレート		144000
+ブーケ	熟成赤ワイン	動物香		174000
+ブーケ	熟成赤ワイン	革		191000
+ブーケ	熟成赤ワイン	ムスク		71600
+欠陥臭	トリクロロアニソール	コルク臭		64300
+欠陥臭	酸素	シェリー		1140000
+欠陥臭	熱	マデイラ		230000
+欠陥臭	揮発酸	酢酸エチル	除光液	34500000
+欠陥臭	揮発酸	酢酸	酢	3470000
+欠陥臭	硫化物	ジメチルスルフィド	スイートコーン	35600000
+欠陥臭	硫化物	エチルメルカプタン	玉ねぎ	4740000
+欠陥臭	硫化物	硫化水素	腐った卵	34300000
+欠陥臭	硫化物	二酸化硫黄	ゴム	236000
+欠陥臭	ブレタノマイセス	エチルフェノール	古い絆創膏	34200000

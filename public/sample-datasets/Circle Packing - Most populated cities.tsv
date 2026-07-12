@@ -1,51 +1,51 @@
 大陸	国	都市	人口
-Asia	China	Shanghai	24256800
-Asia	Pakistan	Karachi	23500000
-Asia	China	Beijing	21516000
-Asia	India	Delhi	16787941
-Asia	China	Tianjin	15200000
-Asia	Japan	Tokyo	13513734
-Asia	China	Guangzhou	13080500
-Asia	India	Mumbai	12442373
-Asia	China	Shenzhen	10467400
-Asia	Indonesia	Jakarta	10075310
-Africa	Nigeria	Lagos	17578000
-Africa	Egypt	Cairo	11001000
-Africa	Democratic Republic of the Congo	Kinshasa-Brazzaville	8754000
-Africa	Somalia	Mogadishu	6346000
-Africa	Sudan	Khartoum-Omdurman	5172000
-Africa	Angola	Luanda	4772000
-Africa	Egypt	Alexandria	4387000
-Africa	Tanzania	Dar es Salaam	4364541
-Africa	Ivory Coast	Abidjan	4125000
-Africa	South Africa	Greater Johannesburg	3670000
-Europe	Turkey	Istanbul	14025646
-Europe	Russia	Moscow	12330126
-Europe	United Kingdom	London	8673713
-Europe	Russia	Saint Petersburg	5225690
-Europe	Germany	Berlin	3562166
-Europe	Spain	Madrid	3165235
-Europe	Ukraine	Kiev	2909491
-Europe	Italy	Rome	2874038
-Europe	France	Paris	2241346
-Europe	Belarus	Minsk	1949400
-North America	Mexico	Mexico City	8918653
-North America	United States	New York City	8550405
-North America	United States	Los Angeles	3971883
-North America	Canada	Toronto	2826498
-North America	United States	Chicago	2720546
-North America	United States	Houston	2296224
-North America	Cuba	Havana	2117625
-North America	Canada	Montreal	1753034
-North America	Mexico	Ecatepec de Morelos	1677678
-North America	United States	Philadelphia	1567442
-South America	Brazil	São Paulo	11967825
-South America	Peru	Lima	8894412
-South America	Colombia	Bogotá	7862277
-South America	Brazil	Rio de Janeiro	6476631
-South America	Chile	Santiago	5507282
-South America	Venezuela	Caracas	3289886
-South America	Argentina	Buenos Aires	3054267
-South America	Brazil	Salvador	2921087
-South America	Brazil	Brasília	2914830
-South America	Brazil	Fortaleza	2591188
+アジア	中国	上海	24256800
+アジア	パキスタン	カラチ	23500000
+アジア	中国	北京	21516000
+アジア	インド	デリー	16787941
+アジア	中国	天津	15200000
+アジア	日本	東京	13513734
+アジア	中国	広州	13080500
+アジア	インド	ムンバイ	12442373
+アジア	中国	深セン	10467400
+アジア	インドネシア	ジャカルタ	10075310
+アフリカ	ナイジェリア	ラゴス	17578000
+アフリカ	エジプト	カイロ	11001000
+アフリカ	コンゴ民主共和国	キンシャサ・ブラザヴィル	8754000
+アフリカ	ソマリア	モガディシュ	6346000
+アフリカ	スーダン	ハルツーム・オムドゥルマン	5172000
+アフリカ	アンゴラ	ルアンダ	4772000
+アフリカ	エジプト	アレクサンドリア	4387000
+アフリカ	タンザニア	ダルエスサラーム	4364541
+アフリカ	コートジボワール	アビジャン	4125000
+アフリカ	南アフリカ	大ヨハネスブルグ	3670000
+ヨーロッパ	トルコ	イスタンブール	14025646
+ヨーロッパ	ロシア	モスクワ	12330126
+ヨーロッパ	イギリス	ロンドン	8673713
+ヨーロッパ	ロシア	サンクトペテルブルク	5225690
+ヨーロッパ	ドイツ	ベルリン	3562166
+ヨーロッパ	スペイン	マドリード	3165235
+ヨーロッパ	ウクライナ	キエフ	2909491
+ヨーロッパ	イタリア	ローマ	2874038
+ヨーロッパ	フランス	パリ	2241346
+ヨーロッパ	ベラルーシ	ミンスク	1949400
+北アメリカ	メキシコ	メキシコシティ	8918653
+北アメリカ	アメリカ合衆国	ニューヨーク	8550405
+北アメリカ	アメリカ合衆国	ロサンゼルス	3971883
+北アメリカ	カナダ	トロント	2826498
+北アメリカ	アメリカ合衆国	シカゴ	2720546
+北アメリカ	アメリカ合衆国	ヒューストン	2296224
+北アメリカ	キューバ	ハバナ	2117625
+北アメリカ	カナダ	モントリオール	1753034
+北アメリカ	メキシコ	エカテペック・デ・モレロス	1677678
+北アメリカ	アメリカ合衆国	フィラデルフィア	1567442
+南アメリカ	ブラジル	サンパウロ	11967825
+南アメリカ	ペルー	リマ	8894412
+南アメリカ	コロンビア	ボゴタ	7862277
+南アメリカ	ブラジル	リオデジャネイロ	6476631
+南アメリカ	チリ	サンティアゴ	5507282
+南アメリカ	ベネズエラ	カラカス	3289886
+南アメリカ	アルゼンチン	ブエノスアイレス	3054267
+南アメリカ	ブラジル	サルヴァドール	2921087
+南アメリカ	ブラジル	ブラジリア	2914830
+南アメリカ	ブラジル	フォルタレザ	2591188

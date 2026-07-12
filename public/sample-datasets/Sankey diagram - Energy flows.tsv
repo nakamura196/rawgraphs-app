@@ -1,52 +1,52 @@
 From（元）	To（先）	TWh
-Coal reserves	Coal	63.96
-Coal imports	Coal	31.37
-Oil reserves	Oil	107.70
-Oil imports	Oil	772.37
-Gas reserves	Natural Gas	82.23
-Gas imports	Natural Gas	2034.32
-UK land based bioenergy	Bio-conversion	17.66
-Agricultural 'waste'	Bio-conversion	37.42
-Other waste	Bio-conversion	40.34
-Other waste	Solid	14.24
-Coal	Solid	95.34
-Oil	Liquid	880.08
-Natural Gas	Gas	2116.55
-Bio-conversion	Solid	30.19
-Bio-conversion	Liquid	7.74
-Bio-conversion	Gas	39.59
-Bio-conversion	Losses	17.90
-Solid	Thermal generation	32.82
-Gas	Thermal generation	1152.79
-Thermal generation	District heating	16.14
-Thermal generation	Electricity grid	576.03
-Thermal generation	Losses	593.44
-Wind	Electricity grid	0.08
-Hydro	Electricity grid	5.32
-Electricity grid	Losses	40.55
-District heating	Industry	16.14
-Electricity grid	Heating and cooling - homes	60.65
-Gas	Heating and cooling - homes	517.94
-Electricity grid	Heating and cooling - commercial	31.41
-Gas	Heating and cooling - commercial	141.48
-Electricity grid	Lighting & appliances - homes	103.40
-Gas	Lighting & appliances - homes	8.03
-Electricity grid	Lighting & appliances - commercial	92.33
-Gas	Lighting & appliances - commercial	9.05
-Electricity grid	Industry	227.82
-Solid	Industry	106.05
-Liquid	Industry	199.26
-Gas	Industry	300.59
-Electricity grid	Agriculture	4.47
-Solid	Agriculture	0.89
-Liquid	Agriculture	3.69
-Gas	Agriculture	2.12
-Electricity grid	Road transport	13.84
-Liquid	Road transport	322.01
-Electricity grid	Rail transport	6.94
-Liquid	Rail transport	7.48
-Liquid	Domestic aviation	14.78
-Liquid	National navigation	22.49
-Liquid	International aviation	188.58
-Liquid	International shipping	129.50
-Gas	Losses	24.11
+石炭埋蔵量	石炭	63.96
+石炭輸入	石炭	31.37
+石油埋蔵量	石油	107.70
+石油輸入	石油	772.37
+ガス埋蔵量	天然ガス	82.23
+ガス輸入	天然ガス	2034.32
+英国陸上バイオエネルギー	バイオ変換	17.66
+農業廃棄物	バイオ変換	37.42
+その他廃棄物	バイオ変換	40.34
+その他廃棄物	固体燃料	14.24
+石炭	固体燃料	95.34
+石油	液体燃料	880.08
+天然ガス	ガス	2116.55
+バイオ変換	固体燃料	30.19
+バイオ変換	液体燃料	7.74
+バイオ変換	ガス	39.59
+バイオ変換	損失	17.90
+固体燃料	火力発電	32.82
+ガス	火力発電	1152.79
+火力発電	地域熱供給	16.14
+火力発電	送電網	576.03
+火力発電	損失	593.44
+風力	送電網	0.08
+水力	送電網	5.32
+送電網	損失	40.55
+地域熱供給	産業	16.14
+送電網	冷暖房（家庭）	60.65
+ガス	冷暖房（家庭）	517.94
+送電網	冷暖房（商業）	31.41
+ガス	冷暖房（商業）	141.48
+送電網	照明・家電（家庭）	103.40
+ガス	照明・家電（家庭）	8.03
+送電網	照明・機器（商業）	92.33
+ガス	照明・機器（商業）	9.05
+送電網	産業	227.82
+固体燃料	産業	106.05
+液体燃料	産業	199.26
+ガス	産業	300.59
+送電網	農業	4.47
+固体燃料	農業	0.89
+液体燃料	農業	3.69
+ガス	農業	2.12
+送電網	道路輸送	13.84
+液体燃料	道路輸送	322.01
+送電網	鉄道輸送	6.94
+液体燃料	鉄道輸送	7.48
+液体燃料	国内航空	14.78
+液体燃料	国内海運	22.49
+液体燃料	国際航空	188.58
+液体燃料	国際海運	129.50
+ガス	損失	24.11
