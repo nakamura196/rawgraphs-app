@@ -32,6 +32,7 @@
     "url": "URLから",
     "urlMessage": "データへのWebアドレス（URL）を入力してください（例：公開Dropboxファイル、公開APIなど）。サーバーがCORS対応であることを確認してください。",
     "loadData": "データを読み込む",
+    "loading": "読み込み中...",
     "loadingError": "読み込みエラー。",
     "queryError": "指定されたエンドポイントでクエリを実行できませんでした",
     "source": "ソース：",
@@ -60,7 +61,10 @@
     "refreshSparql": "クエリからデータを更新",
     "refreshData": "データを更新",
     "transformation": "データ変換",
-    "stackOn": "スタック"
+    "stackOn": "スタック",
+    "localeSource": "提供元：",
+    "stackColumnPlaceholder": "列",
+    "doNotStack": "スタックしない"
   },
   "chartSelector": {
     "show": "表示",
@@ -84,7 +88,8 @@
     "sendReminder": "リマインダーを送信",
     "comeback": "して、後で再度アクセスしてください。",
     "touchNotSupported": "タッチデバイスはまだ完全にはサポートされていません。",
-    "gotIt": "了解！"
+    "gotIt": "了解！",
+    "partyIcon": "パーティーの絵文字"
   },
   "dataMapping": {
     "dimensions": "ディメンション",
@@ -95,14 +100,62 @@
     "dropHereMultiple": "ここにディメンションをドロップ",
     "dropAnotherHere": "別のディメンションをここにドロップ",
     "rollUp": "ロールアップ",
-    "mandatory": "必須"
+    "mandatory": "必須",
+    "acceptsType": "{{type}}型に対応"
   },
   "chartOptions": {
     "artboard": "アートボード",
     "width": "幅",
     "height": "高さ",
     "colors": "カラー",
-    "finalOutput": "最終出力は凡例を含めて{{width}}px × {{height}}pxになります。"
+    "finalOutput": "最終出力は凡例を含めて{{width}}px × {{height}}pxになります。",
+    "yes": "はい",
+    "no": "いいえ",
+    "colorScale": "カラースケール",
+    "colorScheme": "配色",
+    "emptyString": "[空の文字列]",
+    "scaleStart": "開始",
+    "scaleMiddle": "中間",
+    "scaleEnd": "終了",
+    "defaultColor": "既定"
+  },
+  "dataGrid": {
+    "typeNumber": "数値",
+    "typeDate": "日付",
+    "typeString": "文字列"
+  },
+  "aggregations": {
+    "count": "個数",
+    "mean": "平均",
+    "median": "中央値",
+    "max": "最大",
+    "min": "最小",
+    "countDistinct": "一意の個数",
+    "sum": "合計",
+    "csv": "CSV",
+    "csvDistinct": "CSV（一意）"
+  },
+  "scales": {
+    "sequential": "連続",
+    "diverging": "発散",
+    "ordinal": "順序"
+  },
+  "colorSchemes": {
+    "interpolateBlues": "青（連続）",
+    "interpolateGreens": "緑（連続）",
+    "interpolateReds": "赤（連続）",
+    "interpolateRdBu": "赤青（発散）",
+    "interpolateBrBG": "茶緑（発散）",
+    "interpolatePiYG": "桃緑（発散）",
+    "schemeCategory10": "カテゴリ10",
+    "interpolateTurbo": "Turbo（離散）",
+    "interpolateSpectral": "スペクトラル（離散）"
+  },
+  "separators": {
+    "tab": "タブ",
+    "semicolon": "セミコロン",
+    "comma": "カンマ",
+    "pipe": "パイプ"
   },
   "customChartLoader": {
     "title": "カスタムチャートを読み込む",
@@ -156,6 +209,7 @@
     "chartError": "チャートエラー。",
     "dataTypeMismatch": "データ型の不一致：{{type}}型を{{name}}にマッピングできません。",
     "atLeast": "少なくとも",
-    "dimensionsOn": "ディメンションを"
+    "dimensionsOn": "ディメンションを",
+    "and": "、"
   }
 }

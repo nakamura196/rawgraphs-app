@@ -2,6 +2,10 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Row, Col, Card } from 'react-bootstrap'
 import styles from './DataSamples.module.scss'
+import {
+  translateSampleName,
+  translateSampleCategory,
+} from '../../sampleTranslations'
 
 const samplesList = [
   {
@@ -253,7 +257,8 @@ const samplesList = [
   // },
 ]
 export default function DataSamples({ onSampleReady, setLoadingError }) {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const lang = (i18n.language || 'en').split('-')[0]
   const select = async (sample) => {
     const { delimiter, url } = sample
     let response
@@ -270,8 +275,13 @@ export default function DataSamples({ onSampleReady, setLoadingError }) {
   return (
     <Row>
       {samplesList
-        // sort by category name
-        .sort((a, b) => a.name.localeCompare(b.name))
+        // sort by (translated) name
+        .sort((a, b) =>
+          translateSampleName(a, lang).localeCompare(
+            translateSampleName(b, lang),
+            lang
+          )
+        )
         .map((d, i) => {
           return (
             <Col xs={6} lg={4} xl={3} key={i} style={{ marginBottom: 15 }}>
@@ -283,8 +293,8 @@ export default function DataSamples({ onSampleReady, setLoadingError }) {
                   className="d-flex flex-column"
                 >
                   <Card.Title className="">
-                    <h2 className="">{d.name}</h2>
-                    <h4 className="m-0">{d.category}</h4>
+                    <h2 className="">{translateSampleName(d, lang)}</h2>
+                    <h4 className="m-0">{translateSampleCategory(d, lang)}</h4>
                   </Card.Title>
                 </Card.Body>
                 <a

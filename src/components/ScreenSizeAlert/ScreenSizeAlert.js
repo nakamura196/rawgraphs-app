@@ -36,7 +36,7 @@ function ScreenSizeAlert() {
     >
       <Modal.Header closeButton>
         <Modal.Title as="h5">
-          <span role="img" aria-label="Party icon">
+          <span role="img" aria-label={t('screenSizeAlert.partyIcon')}>
             🎉
           </span>{' '}
           {t('screenSizeAlert.title')}

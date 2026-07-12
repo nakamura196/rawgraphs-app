@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect, useCallback } from 'react'
+import { useTranslation } from 'react-i18next'
 import InilineColorPicker from '../../InlineColorPicker'
 import { Col } from 'react-bootstrap'
 import get from 'lodash/get'
@@ -21,6 +22,7 @@ const ChartOptionColorScaleDefault = ({
   colorDataset,
   ...props
 }) => {
+  const { t } = useTranslation()
   const colorFromValue = useMemo(() => {
     const colorFromDefault = get(defaultValue, 'defaultColor', '#cccccc')
     return get(value, 'defaultColor', colorFromDefault)
@@ -50,7 +52,7 @@ const ChartOptionColorScaleDefault = ({
     <>
       <label className={[style['chart-option'], 'row'].join(' ')}>
         <Col xs={6} className="d-flex align-items-center">
-          Default
+          {t('chartOptions.defaultColor')}
         </Col>
         <Col xs={6}>
           <InilineColorPicker

@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Dropdown } from 'react-bootstrap'
 import { localeList } from '../../constants'
 
@@ -8,6 +9,7 @@ export default function DateLocaleSelector({
   onChange,
   ...props
 }) {
+  const { t } = useTranslation()
   const handleChange = useCallback(
     (locale) => {
       if (onChange) {
@@ -28,7 +30,7 @@ export default function DateLocaleSelector({
         <Dropdown.Menu>
           <Dropdown.Header>
             <span>
-              from{' '}
+              {t('parsingOptions.localeSource')}{' '}
               <a
                 href="https://github.com/d3/d3-time-format/tree/master/locale"
                 target="_blank"

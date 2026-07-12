@@ -1,7 +1,9 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { Row, Col, Form } from 'react-bootstrap'
 
 const ChartOptionBoolean = ({ optionId, label, value, error, onChange, className, isEnabled }) => {
+  const { t } = useTranslation()
   return (
     <Row className={className}>
       <Col xs={6} className="d-flex align-items-center nowrap">{label}</Col>
@@ -14,7 +16,7 @@ const ChartOptionBoolean = ({ optionId, label, value, error, onChange, className
             onChange(e.target.checked)
           }}
           id={optionId}
-          label={value ? 'Yes' : 'No'}
+          label={value ? t('chartOptions.yes') : t('chartOptions.no')}
         />
       </Form>
       {error && (

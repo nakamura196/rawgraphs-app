@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Dropdown } from 'react-bootstrap'
 import classnames from 'classnames'
 import styles from './DataMapping.module.scss'
@@ -29,6 +30,7 @@ export default function ChartDimensionItem({
 
   localMappding,
 }) {
+  const { t } = useTranslation()
   const ref = useRef(null)
 
   const [{ isOver }, drop] = useDrop({
@@ -159,7 +161,13 @@ export default function ChartDimensionItem({
             variant={isValid ? 'primary' : 'danger'}
             className="pr-5"
           >
-            {get(AGGREGATIONS_LABELS, relatedAggregation, relatedAggregation)}
+            {t('aggregations.' + relatedAggregation, {
+              defaultValue: get(
+                AGGREGATIONS_LABELS,
+                relatedAggregation,
+                relatedAggregation
+              ),
+            })}
           </Dropdown.Toggle>
           <Dropdown.Menu>
             {aggregators.map((aggregatorName) => (
@@ -167,7 +175,13 @@ export default function ChartDimensionItem({
                 key={aggregatorName}
                 onClick={() => onChangeAggregation(index, aggregatorName)}
               >
-                {get(AGGREGATIONS_LABELS, aggregatorName, aggregatorName)}
+                {t('aggregations.' + aggregatorName, {
+                  defaultValue: get(
+                    AGGREGATIONS_LABELS,
+                    aggregatorName,
+                    aggregatorName
+                  ),
+                })}
               </Dropdown.Item>
             ))}
           </Dropdown.Menu>

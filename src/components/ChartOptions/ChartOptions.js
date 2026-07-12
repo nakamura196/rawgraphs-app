@@ -17,6 +17,11 @@ import get from 'lodash/get'
 import map from 'lodash/map'
 import styles from './ChartOptions.module.scss'
 import omit from 'lodash/omit'
+import {
+  translateOptionGroup,
+  translateOptionLabel,
+  translateSelectValue,
+} from '../../chartOptionTranslations'
 
 const CHART_OPTION_COMPONENTS = {
   number: ChartOptionNumber,
@@ -65,6 +70,15 @@ function WrapControlComponent({
   ...props
 }) {
   const Component = CHART_OPTION_COMPONENTS[type]
+  const { i18n } = useTranslation()
+  const lang = (i18n.language || 'en').split('-')[0]
+  const translatedLabel = translateOptionLabel(label, lang)
+  const translatedOptions = Array.isArray(props.options)
+    ? props.options.map((o) => ({
+        ...o,
+        label: translateSelectValue(o.label, lang),
+      }))
+    : props.options
 
   const remainingOptions = useMemo(() => {
     if (type !== 'colorScale') {
@@ -174,10 +188,10 @@ function WrapControlComponent({
       label={
         repeatIndex !== undefined ? (
           <React.Fragment>
-            {label} ({repeatIndex + 1})
+            {translatedLabel} ({repeatIndex + 1})
           </React.Fragment>
         ) : (
-          label
+          translatedLabel
         )
       }
       {...omit(props, [
@@ -188,6 +202,7 @@ function WrapControlComponent({
         'dataTypes',
         'mappedData',
       ])}
+      options={translatedOptions}
       onChange={handleControlChange}
     />
   )
@@ -203,7 +218,8 @@ const ChartOptions = ({
   error,
   mappedData,
 }) => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const lang = (i18n.language || 'en').split('-')[0]
   const optionsConfig = useMemo(() => {
     return getOptionsConfig(chart?.visualOptions)
   }, [chart])
@@ -276,7 +292,9 @@ const ChartOptions = ({
               <Col
                 className={`d-flex justify-content-between align-items-center ${styles['group-header']}`}
               >
-                <h5 className="text-uppercase m-0">{groupName}</h5>
+                <h5 className="text-uppercase m-0">
+                  {translateOptionGroup(groupName, lang)}
+                </h5>
                 <span
                   className={[styles['collapse-button'], 'cursor-pointer'].join(
                     ' '

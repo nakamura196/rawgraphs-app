@@ -1,9 +1,11 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import styles from '../ChartOptions.module.scss'
 import { COLOR_SCHEMES_LABELS } from '../../../constants'
 import get from 'lodash/get'
 
 const ColorSchemePreview = ({ label, scale, numSamples=150 }) => {
+  const { t } = useTranslation()
   let samples
   if (scale.ticks) {
     samples = scale.ticks(numSamples)
@@ -17,7 +19,7 @@ const ColorSchemePreview = ({ label, scale, numSamples=150 }) => {
   }
   return (
     <div className={styles['scheme-preview']}>
-      {label && <div style={{marginBottom:2}}>{get(COLOR_SCHEMES_LABELS, label, label)}</div>}
+      {label && <div style={{marginBottom:2}}>{t('colorSchemes.' + label, { defaultValue: get(COLOR_SCHEMES_LABELS, label, label) })}</div>}
       <div className="d-flex">
         {samples.map((sample) => (
           <div

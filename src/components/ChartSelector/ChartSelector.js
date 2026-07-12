@@ -6,11 +6,22 @@ import { BsLink, BsPlus } from 'react-icons/bs'
 import uniq from 'lodash/uniq'
 import styles from './ChartSelector.module.scss'
 import { BsFillTrashFill } from 'react-icons/bs'
+import {
+  translateChartName,
+  translateChartDescription,
+  translateCategory,
+} from '../../chartTranslations'
 
 function filterCharts(charts, filter, allChartsLabel) {
   return filter === allChartsLabel
     ? charts
     : charts.filter((d) => d.metadata.categories.indexOf(filter) !== -1)
+}
+
+// Capitalize the first letter (no-op for Japanese text) so translated and
+// original category labels are rendered consistently.
+function capitalize(s) {
+  return s ? s.charAt(0).toUpperCase() + s.slice(1) : s
 }
 
 function ChartSelector({
@@ -20,7 +31,8 @@ function ChartSelector({
   onRemoveCustomChart,
   onAddChartClick,
 }) {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const lang = (i18n.language || 'en').split('-')[0]
   const allChartsLabel = t('chartSelector.allCharts')
   const [filter, setFilter] = useState(allChartsLabel)
 
@@ -46,7 +58,7 @@ function ChartSelector({
           {t('chartSelector.show')}
           <Dropdown className="d-inline-block ml-2 raw-dropdown">
             <Dropdown.Toggle variant="white" className="pr-5">
-              {filter.charAt(0).toUpperCase() + filter.slice(1)}
+              {capitalize(translateCategory(filter, lang))}
             </Dropdown.Toggle>
             <Dropdown.Menu>
               <Dropdown.Item
@@ -60,7 +72,7 @@ function ChartSelector({
               ).map((d) => {
                 return (
                   <Dropdown.Item key={d} onClick={() => handleFilterChange(d)}>
-                    {d.charAt(0).toUpperCase() + d.slice(1)}
+                    {capitalize(translateCategory(d, lang))}
                   </Dropdown.Item>
                 )
               })}
@@ -75,12 +87,20 @@ function ChartSelector({
               <Card.Img variant="top" src={currentChart.metadata.thumbnail} />
               <Card.Body>
                 <Card.Title className="m-0">
-                  <h2 className="m-0">{currentChart.metadata.name}</h2>
+                  <h2 className="m-0">
+                    {translateChartName(currentChart.metadata, lang)}
+                  </h2>
                 </Card.Title>
                 <Card.Subtitle className="m-0">
-                  <h4 className="mb-2">{currentChart.metadata.category}</h4>
+                  <h4 className="mb-2">
+                    {currentChart.metadata.categories
+                      .map((c) => translateCategory(c, lang))
+                      .join('、')}
+                  </h4>
                 </Card.Subtitle>
-                <Card.Text>{currentChart.metadata.description}</Card.Text>
+                <Card.Text>
+                  {translateChartDescription(currentChart.metadata, lang)}
+                </Card.Text>
                 <Card.Link
                   className={classNames({
                     [styles.disabled]: !currentChart.metadata.code,
@@ -126,7 +146,7 @@ function ChartSelector({
                     <Card.Body className="w-75 px-2 py-3">
                       <Card.Title className="m-0">
                         <h2 className="m-0" style={{ whiteSpace: 'nowrap' }}>
-                          {d.metadata.name}
+                          {translateChartName(d.metadata, lang)}
                         </h2>
                         {d.rawCustomChart && (
                           <div>
@@ -160,11 +180,11 @@ function ChartSelector({
                       </Card.Title>
                       <Card.Subtitle className="m-0">
                         <h4 className="m-0">
-                          {d.metadata.categories
-                            .join(', ')
-                            .charAt(0)
-                            .toUpperCase() +
-                            d.metadata.categories.join(', ').slice(1)}
+                          {capitalize(
+                            d.metadata.categories
+                              .map((c) => translateCategory(c, lang))
+                              .join('、')
+                          )}
                         </h4>
                       </Card.Subtitle>
                     </Card.Body>

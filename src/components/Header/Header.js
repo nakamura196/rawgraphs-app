@@ -19,7 +19,7 @@ export default function Header({ menuItems }) {
           {menuItems.map((d, i) => {
             return (
               <Nav.Link key={'item' + i} href={d.href}>
-                {d.label}
+                {d.slug ? t('header.' + d.slug) : d.label}
               </Nav.Link>
             )
           })}

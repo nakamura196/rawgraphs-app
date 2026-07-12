@@ -4,6 +4,7 @@ import { chart as rawChart } from '@rawgraphs/rawgraphs-core'
 import useDebounce from '../../hooks/useDebounce'
 import WarningMessage from '../WarningMessage'
 import { onChartRendered } from '../../gaEvents'
+import { translateDimensionName } from '../../chartOptionTranslations'
 
 const ChartPreview = ({
   chart,
@@ -16,7 +17,8 @@ const ChartPreview = ({
   setRawViz,
   mappedData,
 }) => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const lang = (i18n.language || 'en').split('-')[0]
   const domRef = useRef(null)
 
   const vizOptionsDebounced = useDebounce(visualOptions, 200)
@@ -42,8 +44,8 @@ const ChartPreview = ({
         <span>
           {t('chartPreview.requiredVariables')}{' '}
           {requiredVariables
-            .map((d, i) => <span key={i} className="font-weight-bold">{d.name}</span>)
-            .reduce((prev, curr) => [prev, ' and ', curr])}
+            .map((d, i) => <span key={i} className="font-weight-bold">{translateDimensionName(d.name, lang)}</span>)
+            .reduce((prev, curr) => [prev, t('chartPreview.and'), curr])}
         </span>
       )
       setError({ variant: 'secondary', message: errorMessage })
@@ -70,10 +72,10 @@ const ChartPreview = ({
             .map((d) => (
               <>
                 {t('chartPreview.atLeast')} <span className="font-weight-bold">{d.minValues}</span>{' '}
-                {t('chartPreview.dimensionsOn')} <span className="font-weight-bold">{d.name}</span>
+                {t('chartPreview.dimensionsOn')} <span className="font-weight-bold">{translateDimensionName(d.name, lang)}</span>
               </>
             ))
-            .reduce((prev, curr) => [prev, ' and ', curr])}
+            .reduce((prev, curr) => [prev, t('chartPreview.and'), curr])}
           .
         </span>
       )

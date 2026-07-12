@@ -8,6 +8,7 @@ import get from 'lodash/get'
 import uniqueId from 'lodash/uniqueId'
 import classnames from 'classnames'
 import arrayMove from 'array-move'
+import { translateDimensionName } from '../../chartOptionTranslations'
 import arrayInsert from 'array-insert'
 
 // import { DATATYPE_ICONS } from "../../constants"
@@ -35,7 +36,8 @@ const ChartDimensionCard = ({
   replaceDimension,
   localMappding,
 }) => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const lang = (i18n.language || 'en').split('-')[0]
   const [{ isOver }, drop] = useDrop({
     accept: ['column', 'card'],
     collect: (monitor) => ({
@@ -218,7 +220,9 @@ const ChartDimensionCard = ({
               // )
             })}
           </span>
-          <span className="text-capitalize text-center">{dimension.name}</span>
+          <span className="text-capitalize text-center">
+            {translateDimensionName(dimension.name, lang)}
+          </span>
           <span
             className={styles['dimension-required'] + ' text-right'}
             style={{ opacity: dimension.required ? 1 : 0 }}

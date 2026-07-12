@@ -1,4 +1,5 @@
 import React, { useMemo, useRef, useState, useCallback } from 'react'
+import { useTranslation } from 'react-i18next'
 import ReactDataGrid from 'react-data-grid'
 import { Overlay, OverlayTrigger } from 'react-bootstrap'
 import classNames from 'classnames'
@@ -52,6 +53,7 @@ function DataTypeSelector({
   onTypeChange,
   currentTypeComplete,
 }) {
+  const { t } = useTranslation()
   const dataTypeIconDomRef = useRef(null)
   const [showPicker, setShowPicker] = useState(false)
   const currentType = get(typeDescriptor, 'type', typeDescriptor)
@@ -138,7 +140,7 @@ function DataTypeSelector({
                 [S.selected]: currentType === 'number',
               })}
             >
-              <NumberIcon /> Number
+              <NumberIcon /> {t('dataGrid.typeNumber')}
             </div>
             <OverlayTrigger
               placement="right-start"
@@ -163,7 +165,7 @@ function DataTypeSelector({
                 >
                   <div>
                     <DateIcon />
-                    {'Date'}
+                    {t('dataGrid.typeDate')}
                     {currentType === 'date' && (
                       <span className={S['date-format-preview']}>
                         {' (' + (currentTypeComplete.dateFormat) + ')  '}
@@ -183,7 +185,7 @@ function DataTypeSelector({
                 [S.selected]: currentType === 'string',
               })}
             >
-              <StringIcon /> String
+              <StringIcon /> {t('dataGrid.typeString')}
             </div>
           </div>
         )}

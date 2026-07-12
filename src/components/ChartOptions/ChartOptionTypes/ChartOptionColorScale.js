@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect, useCallback, useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 import InilineColorPicker from '../../InlineColorPicker'
 import ColorSchemesDropDown from './ColorSchemesDropDown'
 import { Row, Col, Dropdown } from 'react-bootstrap'
@@ -51,6 +52,7 @@ const ChartOptionColorScale = ({
   hasAnyMapping,
   ...props
 }) => {
+  const { t } = useTranslation()
 
   // here we leverage injection of the __loaded prop in the color scale, see App.js
   const initialValue = useRef(!!value.__loaded)
@@ -366,19 +368,19 @@ const ChartOptionColorScale = ({
     <>
       <Row className={props.className} style={{marginTop:'8px', marginBottom:'8px'}}>
         <Col xs={5} className="d-flex align-items-center nowrap">
-          Color scale
+          {t('chartOptions.colorScale')}
         </Col>
         <Col xs={7}>
           <Dropdown className="d-inline-block raw-dropdown w-100">
             <Dropdown.Toggle variant="white" className="w-100" style={{paddingRight:24}} disabled={!colorDataType}>
-              {get(SCALES_LABELS, scaleType, scaleType)}
+              {t('scales.' + scaleType, { defaultValue: get(SCALES_LABELS, scaleType, scaleType) })}
             </Dropdown.Toggle>
             <Dropdown.Menu className="w-100">
             {availableScaleTypes.map(
               (s) => {
                 return (
                   <Dropdown.Item key={s} onClick={()=>handleChangeScaleType(s)}>
-                    {get(SCALES_LABELS, s, s)}
+                    {t('scales.' + s, { defaultValue: get(SCALES_LABELS, s, s) })}
                   </Dropdown.Item>
                 )
               }
@@ -391,7 +393,7 @@ const ChartOptionColorScale = ({
       {/* Color scheme */}
       <Row className={[props.className].join(' ')} style={{marginTop:'8px', marginBottom:'8px'}}>
         <Col xs={5} className="d-flex align-items-center nowrap">
-          Color scheme
+          {t('chartOptions.colorScheme')}
         </Col>
         <Col xs={7}>
           <ColorSchemesDropDown
@@ -430,7 +432,7 @@ const ChartOptionColorScale = ({
                         title={userValue.domain && userValue.domain.toString()}
                       >
                         {userValue.domain === ''
-                          ? '[empty string]'
+                          ? t('chartOptions.emptyString')
                           : userValue.domain.toString()}
                       </span>
                     )}
@@ -438,10 +440,10 @@ const ChartOptionColorScale = ({
                     <>
                       <span className="nowrap">
                         {i === 0
-                          ? 'Start'
+                          ? t('chartOptions.scaleStart')
                           : i === userValues.length - 1
-                            ? 'End'
-                            : 'Middle'}
+                            ? t('chartOptions.scaleEnd')
+                            : t('chartOptions.scaleMiddle')}
                       </span>
                       <input
                         disabled={locked}
