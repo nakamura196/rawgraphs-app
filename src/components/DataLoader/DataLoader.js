@@ -193,7 +193,7 @@ function DataLoader({
         <p className="mt-3">
           {selectedOption.message}
           {/*<a
-            href="https://rawgraphs.io/learning"
+            href="https://nakamura196.github.io/rawgraphs.github.io/learning/"
             target="_blank"
             rel="noopener noreferrer"
           >

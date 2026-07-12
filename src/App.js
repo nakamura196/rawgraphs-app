@@ -334,7 +334,7 @@ function App() {
         >
           {t('cookie.message')}{' '}
           <a
-            href="https://rawgraphs.io/privacy/"
+            href="https://nakamura196.github.io/rawgraphs.github.io/privacy/"
             target="_blank"
             rel="noopener noreferrer"
             className="ml-2 text-body border-bottom border-dark"

@@ -219,7 +219,7 @@ function CustomChartLoader({ isOpen, onClose, ...props }) {
       <Modal.Footer>
         <div className='text-center w-100'>
           {t('customChartLoader.documentation')}{' '}
-          <a href="https://rawgraphs.io" target="_blank" rel="noreferrer">
+          <a href="https://nakamura196.github.io/rawgraphs.github.io/" target="_blank" rel="noreferrer">
             {t('customChartLoader.checkDocs')}
           </a>
         </div>

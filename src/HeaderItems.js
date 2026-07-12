@@ -2,17 +2,17 @@ const headerItems = [
   {
     label: 'About',
     slug: 'about',
-    href: 'https://rawgraphs.io/about',
+    href: 'https://nakamura196.github.io/rawgraphs.github.io/about/',
   },
   // {
   //   label: 'Gallery',
   //   slug: 'gallery',
-  //   href: 'https://rawgraphs.io/gallery',
+  //   href: 'https://nakamura196.github.io/rawgraphs.github.io/gallery/',
   // },
   {
     label: 'Learning',
     slug: 'learning',
-    href: 'https://rawgraphs.io/learning',
+    href: 'https://nakamura196.github.io/rawgraphs.github.io/learning/',
   },
   // {
   //   label: 'FAQs',
